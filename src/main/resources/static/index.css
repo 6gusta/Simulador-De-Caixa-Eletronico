@@ -1,0 +1,182 @@
+#caixa{
+    width: 700px;
+    height: 500px;
+    background-color: rgba(255, 0, 0, 0.466);
+    margin-left: 27%;
+}
+#tela{
+    width: 300px;
+    height: 170px;
+    background-color:white;
+    margin-top: -390px;
+    margin-left: 530px;
+    border: 50px solid gray;
+}
+#tela input {
+    /* Adicione propriedades CSS para mover o input para a esquerda */
+    margin-left: 50px; /* Altere o valor conforme necessário */
+    margin-top: 40px;
+    width: 200px;
+}
+
+#teclado{
+    background-color: white;
+    width: 120px;
+    height: 80px;
+    margin-left: 650px;
+    margin-top: 20px;
+    border: 20px solid gray;
+
+}
+#b1{
+    width: 30px;
+    height: 30px;
+    margin-top: 170px;
+    margin-left: 170px;
+   
+
+}
+#b2{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 170px;
+}
+#b3{
+    width: 30px;
+    height: 30px;
+    margin-left: 170px;
+    margin-top: 10PX;
+}
+#b4{
+    width: 30px;
+    height: 30px;
+    margin-left: 170px;
+    margin-top: 10px;
+
+}
+#b5{
+    width: 30px;
+    height: 30px;
+    margin-left:95px;
+   
+}
+#bb5{
+    width: 30px;
+    height: 30px;
+    margin-left:420px;
+    margin-top: -151px;
+    
+}
+#b6{
+    width: 30px;
+    height: 30px;
+    margin-left: 515px;
+    margin-top: 10px;
+ 
+}
+#b7{
+    width: 30px;
+    height: 30px;
+    margin-left: 515px;
+    margin-top: 10px;
+}
+#b8{
+    width: 30px;
+    height: 30px;
+    margin-left: 515px;
+    margin-top: 10px;
+}
+#b1:hover{
+    background-color: azure;
+}
+#b2:hover{
+    background-color: azure;
+}
+#b3:hover{
+    background-color: azure;
+}
+#b4:hover{
+    background-color: azure;
+}
+#b5:hover{
+    background-color: azure;
+}
+#b6:hover{
+    background-color: azure;
+}
+#b7:hover{
+    background-color: azure;
+}
+#b8:hover{
+    background-color: azure;
+}
+#t1{
+    width: 25px;
+    height: 25px;
+}
+#t2{
+    width: 25px;
+    height: 25px;
+}
+#t3{
+    width: 25px;
+    height: 25px;
+}
+#t4{
+    width: 25px;
+    height: 25px;
+    margin-left: 30px;
+    
+}
+#tt4{
+    margin-top: -75px;
+}
+#t5{
+
+        width: 25px;
+        height: 25px;
+        margin-left: 30px;
+  
+}
+#t6{
+    margin-left: 30px;
+    width: 25px;
+    height: 25px
+}
+
+#t7{
+    margin-left: 60px;
+    width: 25px;
+    height: 25px
+}
+#tt7{
+  margin-top:-75px ;
+}
+#t8{
+ 
+        margin-left: 60px;
+        width: 25px;
+        height: 25px
+  
+}
+#t9{
+ 
+    margin-left: 60px;
+    width: 25px;
+    height: 25px
+
+}
+#t1:hover,
+#t2:hover,
+#t3:hover,
+#t4:hover,
+#t5:hover,
+#t6:hover,
+#t7:hover,
+#t8:hover,
+#t9:hover {
+    background-color: azure;
+}
+
+
