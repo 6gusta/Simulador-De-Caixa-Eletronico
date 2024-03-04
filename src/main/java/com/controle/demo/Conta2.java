@@ -30,10 +30,6 @@ public class Conta2 extends Numerodaconta {
     public void setValor(int valor) {
         this.valor = valor;
     }
-    @Override
-    public void bancocaixa(){
-        System.out.println(" VOCE ESTA NO BANCO ITAU ");
-    }
 
 
     

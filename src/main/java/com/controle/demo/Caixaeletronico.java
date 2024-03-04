@@ -11,7 +11,9 @@ public class Caixaeletronico {
 
         Scanner scanner = new Scanner(System.in);
         int numeroContaDigitado;
-        int tentativasSenha = 0; // Variável para controlar as tentativas de senha
+        int tentativasSenha = 0; 
+        // Variável para controlar as tentativas de senha
+
 
         do {
             System.out.print("Digite o número da conta: ");
@@ -34,6 +36,8 @@ public class Caixaeletronico {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    
+        
 
         if (numeroContaDigitado == numeroContaArmazenado) {
             System.out.println("A validação do cartão foi concluída. Próxima informação...");

@@ -38,14 +38,6 @@ public class Conta1 extends Numerodaconta {
     public void setValor(int valor) {
         this.valor = valor;
     }
-
-
-
-
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-    
     public void saque(){
         System.out.println("valor sacado com sucesso ");
     }
