@@ -1,6 +1,6 @@
 #caixa{
     width: 700px;
-    height: 500px;
+    height: 700px;
     background-color: rgba(255, 0, 0, 0.466);
     margin-left: 27%;
 }
@@ -8,8 +8,8 @@
     width: 300px;
     height: 170px;
     background-color:white;
-    margin-top: -390px;
-    margin-left: 530px;
+    margin-top: -590px;
+    margin-left: 660px;
     border: 50px solid gray;
 }
 #tela input {
@@ -21,12 +21,27 @@
 
 #teclado{
     background-color: white;
-    width: 120px;
-    height: 80px;
-    margin-left: 650px;
+    width: 150px;
+    height: 110px;
+    margin-left: 770px;
     margin-top: 20px;
     border: 20px solid gray;
 
+}
+#cor{
+    width: 40px;
+    height: 5px;
+    background-color: green;
+}
+#cor2{
+    width: 40px;
+    height: 5px;
+    background-color: yellow;
+}
+#cor3{
+    width: 40px;
+    height: 5px;
+    background-color: red;
 }
 #b1{
     width: 30px;
@@ -148,7 +163,8 @@
 #t7{
     margin-left: 60px;
     width: 25px;
-    height: 25px
+    height: 25px;
+
 }
 #tt7{
   margin-top:-75px ;
@@ -167,16 +183,60 @@
     height: 25px
 
 }
-#t1:hover,
-#t2:hover,
-#t3:hover,
-#t4:hover,
-#t5:hover,
-#t6:hover,
-#t7:hover,
-#t8:hover,
-#t9:hover {
-    background-color: azure;
+#t10{
+ 
+   
+    width: 25px;
+    height: 30px
+
+}
+#t11{
+    margin-left: 30px;
+    margin-top: -20px;
+      
+    width: 25px;
+    height: 30px
+}
+#tt11{
+    margin-top: -25px;
+}
+#t12{
+    margin-left: 60px;
+    margin-top: -40px;
+      
+    width: 25px;
+    height: 30px
+}
+#tt12{
+    margin-top: -25px;
+
+}
+
+#entrar{
+    margin-left: 90px;
+    margin-top: -52px;
+    height: 35px;
+    margin-top: 0px;
+    width: 60px;
+    color: green;
+
+}
+#trar{
+    margin-top: -105px;
+}
+#apagar{
+    margin-left: 90px;
+    width: 60px;
+    height: 35px;
+    margin-top: 0px;
+}
+#cancelar{
+    margin-left: 90px;
+    width: 60px;
+    height: 35px;
+    margin-top: 0px;
+
+
 }
 
 
