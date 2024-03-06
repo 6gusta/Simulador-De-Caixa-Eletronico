@@ -1,0 +1,48 @@
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimplesTec - Caixa Eletrônico</title>
+  <link rel="stylesheet" href="inicio.css">
+  <style>
+    /* Estilos CSS */
+  </style>
+</head>
+<body>
+    <div class="container">
+      <h1>Bem-vindo à SimplesTec</h1>
+      <p>Sua solução simples e eficaz para suas necessidades bancárias.</p>
+      <p>A SimplesTec oferece tecnologia de ponta para simplificar suas transações bancárias. Nossa equipe está comprometida em fornecer a melhor experiência aos nossos clientes.</p>
+      <button class="button" onclick="startTutorial()">Ver Tutorial rapido </button>
+      <a href="tutorial.html" class="button">Ver Tutorial Completo</a>
+      <a href="faq.html"> ver FAQ</a>
+      <div id="helpBox" class="help-box" style="display:none;">
+    
+
+      </div>
+      <div id="tutorial" style="display:none;">
+        <h2>Tutorial Rápido:</h2>
+        <p>Para usar o caixa eletrônico:</p>
+        <ol>
+          <li>Insira seu cartão no leitor de cartão.</li>
+          <li>Digite seu PIN usando o teclado numérico.</li>
+          <li>Selecione a operação desejada (saque, depósito, etc.).</li>
+          <li>Siga as instruções na tela para concluir a transação.</li>
+        </ol>
+      </div>
+      <h2>Precisa de Ajuda?</h2>
+      <p>Se você precisar de assistência durante o uso do caixa eletrônico, nossa equipe está aqui para ajudar.</p>
+      <p>Entre em contato com nossa equipe de suporte pelo e-mail <a href="mailto:suporte@simplestec.com">suporte@simplestec.com</a>.</p>
+      <p>Nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana, para ajudá-lo com qualquer dúvida ou problema que você possa ter.</p>
+    
+    </div>
+  
+    <script>
+      function startTutorial() {
+        document.getElementById('helpBox').style.display = 'block';
+        document.getElementById('tutorial').style.display = 'block';
+      }
+    </script>
+  </body>
+  </html>

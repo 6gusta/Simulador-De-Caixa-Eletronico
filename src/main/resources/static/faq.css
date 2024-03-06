@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos específicos para a página FAQ */
+  h2 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  ol {
+    margin-bottom: 20px;
+  }
+  
+  ol li {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos específicos para a página inicial */
+  .homepage-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
