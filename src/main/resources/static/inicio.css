@@ -14,10 +14,48 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
+  header{
+    background-color: #0056b3;
+    width: 100%;
+    height: 100px;
+  
+  }
+  #burger{
+    font-family: 'Material Symbols Outlined', sans-serif;
+    margin-left: 1800px;
+    color: white;
+  font-size: 50px;
+    
+    
+
+  }
+  #divb{
+    margin-top: -100px;
+    width: 200px;
+  }
+  .icon {
+    color: transparent; /* Torna o ícone sem cor */
+  }
+ 
   
   h1, h2, p {
     margin-bottom: 20px;
   }
+  h4{
+    margin-left: 20px;
+    color: white;
+    
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  h5{
+    color: white;
+    font-size: 25px;
+    
+
+    margin-left: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
   
   .button {
     background-color: #007bff;
@@ -27,6 +65,17 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+  #b{
+    margin-top: 40px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 40px;
   }
   
   .button:hover {
@@ -39,3 +88,5 @@ body {
     background-color: #f9f9f9;
     border-radius: 5px;
     text-align: left
+  }
+    

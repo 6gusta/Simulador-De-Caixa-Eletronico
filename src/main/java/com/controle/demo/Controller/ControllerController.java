@@ -9,7 +9,16 @@ public class ControllerController {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("mensagem", "Olá, mundo!");
-        return "index.html"; // Isso corresponde ao arquivo "src/main/resources/templates/index.html"
+        // Lógica do método index
+        return "inicio.html";
     }
+    
+    @GetMapping("/inicio")
+    public String inicio(Model model) {
+        // Lógica do método inicio
+        return "index.html";
+    }
+    
+
+
 }
