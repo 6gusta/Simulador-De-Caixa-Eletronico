@@ -26,8 +26,9 @@ body {
   #burger{
     font-family: 'Material Symbols Outlined', sans-serif;
     margin-left: 1800px;
-    color: white;
-  font-size: 50px;
+    color:rgb(233, 183, 139);
+  font-size: 60px;
+  margin-top: -20px;
     
     
 
@@ -45,22 +46,23 @@ body {
     margin-bottom: 20px;
   }
   h4{
-    margin-left: 20px;
+    margin-left: 420px;
     color: white;
     
   }
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
   h5{
-    color: white;
-    font-size: 25px;
+    color:rgb(233, 183, 139);
+    font-size: 35px;
     
 
-    margin-left: 110px;
+    margin-left: 150px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
   }
   #logo{
-    margin-left: 50px;
-    margin-top: -30px;
+    margin-left: 40px;
+    margin-top: -90px;
   }
 
   
