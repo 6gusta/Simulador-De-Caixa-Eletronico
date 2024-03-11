@@ -22,6 +22,29 @@
 
   <div id="divb">
     <span class="material-symbols-outlined" id="burger">☰</span>
+    <div class="menu" id="menu">
+
+      <div class="duvida">
+        <p id=" pagina">Pagina inicial</p>
+      </div>
+     <div class="duvidas">
+
+       <p> como usar o SIMPLE XP </p>
+      </div>
+      <div class="duvidas">
+        <P> Ir para o caixa eletrônico</P>
+      </div>
+   <div class="duvidas">
+    <p> Sobre nos </p>
+   </div>
+   <div class="duvidas">
+    <p>Contatos </p>
+   </div>
+    <div class="duvidas">
+      <p >FAQ</p>
+    </div>
+    </div>
+
   </div>
   <div id="logo">
     <img  src="BUwQtAL - Imgur (2).png" alt="Logo">
@@ -35,6 +58,8 @@
       <p>Sua solução simples e eficaz para suas necessidades bancárias.</p>
       <p>A SimplesTec oferece tecnologia de ponta para simplificar suas transações bancárias. Nossa equipe está comprometida em fornecer a melhor experiência aos nossos clientes.</p>
       <button class="button" onclick="startTutorial()">Ver Tutorial rapido </button>
+      
+
  
       <a href="tutorial.html" class="button">Ver Tutorial Completo</a>
 
@@ -61,15 +86,66 @@
     </div>
   
     <script>
-      function startTutorial() {
-        document.getElementById('helpBox').style.display = 'block';
-        document.getElementById('tutorial').style.display = 'block';
-        
-      }
+// Variável global para armazenar o status do tutorial
+let tutorialAberto = false;
+
+function startTutorial() {
+    document.getElementById('helpBox').style.display = 'block';
+    document.getElementById('tutorial').style.display = 'block';
+
+    // Verifica se o event listener já foi adicionado antes de adicioná-lo novamente
+    if (!document.hasEventListener('click', closeTutorial)) {
+        document.addEventListener('click', closeTutorial);
+    }
+
+    // Define a variável tutorialAberto como true quando o tutorial é aberto
+    tutorialAberto = true;
+}
+
+
+
+
+
+
+
+
+      
     
 function redirecionar() {
   window.location.href = "index.html";
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerIcon = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+
+    // Adiciona um event listener para o clique no ícone do menu
+    burgerIcon.addEventListener('click', function(event) {
+        // Impede que o evento de clique se propague para o documento
+        event.stopPropagation();
+        
+        // Toggles o menu (abre/fecha)
+        toggleMenu();
+    });
+
+    // Adiciona um event listener para o clique fora do menu para fechá-lo
+    document.addEventListener('click', function(event) {
+        // Verifica se o clique ocorreu fora do menu
+        if (!menu.contains(event.target) && menu.style.display === 'block') {
+            // Fecha o menu se estiver aberto
+            menu.style.display = 'none';
+        }
+    });
+
+    // Função para alternar a exibição do menu
+    function toggleMenu() {
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+});
+
 
     </script>
   </body>
