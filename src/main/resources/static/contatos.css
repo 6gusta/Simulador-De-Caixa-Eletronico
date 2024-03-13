@@ -1,0 +1,115 @@
+ /* Estilo para o botão de abrir o contato */
+ .contact-toggle {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Mostra que é interativo */
+  }
+
+  /* Estilo para a seção de contato */
+  .contact-section {
+    position: fixed; /* Posição fixa na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da borda direita da tela */
+    background-color: rgba(0, 123, 255, 0.9); /* Cor de fundo com transparência */
+    color: #fff; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    display: none; /* Inicialmente oculto */
+    z-index: 999; /* Z-index para garantir que fique sobre outros elementos */
+  }
+
+  /* Efeito de transição suave */
+  .contact-section.transition {
+    transition: transform 0.3s ease-in-out;
+  }
+  header{
+    background-color: #0056b3;
+    width: 100%;
+    height: 100px;
+    background-image: url(WhatsApp%20Image%202024-03-09%20at%2016.09.43.jpeg);
+   
+  }
+  h4{
+    margin-left: 420px;
+    color: white;
+    
+    }
+    h5{
+    color:rgb(233, 183, 139);
+    font-size: 35px;
+    
+    
+    margin-left: 1620px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    }
+    #logo{
+    margin-left: 1500px;
+    margin-top: -90px;
+    }
+    .menu {
+    display: none;
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 5px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 390px;
+    height: 520px;
+    }
+    #divb{
+    margin-top: -130px;
+    width: 200px;
+    }
+    #burger{
+      font-family: 'Material Symbols Outlined', sans-serif;
+      margin-left: 70px;
+      color:rgb(233, 183, 139);
+    font-size: 60px;
+    margin-top: -20px;
+    cursor: pointer;
+      
+      
+    
+    }
+    .duvidas{
+        border-bottom: 1px solid black;
+        width: 400px;
+        height: 50px;
+       
+      }
+      .duvidas:hover{
+        background-color: rgba(169, 169, 169, 0.39);
+      }
+      .duvida:hover{
+        background-color: rgba(169, 169, 169, 0.39);
+      }
+      .duvida{
+        border-bottom: 1px solid black;
+        width: 400px;
+        height: 60px;
+        background-color: #007bff;
+        color: white;
+        margin-top: -50px;
+        font-size: 25px;
+        
+      
+      }
+      .duvida p {
+        margin-top: 40px;
+      }
+
+  /* Estilo para o botão de fechar o contato */
+  .close-button {
+    position: absolute; /* Posição absoluta dentro da seção de contato */
+    top: 5px;
+    right: 5px;
+    color: #fff; /* Cor do ícone */
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Mostra que é interativo */
+  }

@@ -37,20 +37,142 @@
       display: block;
       margin: 0 auto;
     }
+    header{
+    background-color: #0056b3;
+    width: 100%;
+    height: 100px;
+    background-image: url(WhatsApp%20Image%202024-03-09%20at%2016.09.43.jpeg);
+   
+  }
+  #burger{
+    font-family: 'Material Symbols Outlined', sans-serif;
+    margin-left: 70px;
+    color:rgb(233, 183, 139);
+  font-size: 60px;
+  margin-top: -80px;
+  cursor: pointer;
+    
+    
+
+  }
+    h4{
+    margin-left: 420px;
+    color: white;
+    
+  }
+  h5{
+    color:rgb(233, 183, 139);
+    font-size: 35px;
+    
+
+    margin-left: 1620px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+  }
+    #logo{
+    margin-left: 1230px;
+    margin-top: -90px;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 5px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 390px;
+    height: 520px;
+}
+#divb{
+    margin-top: -130px;
+    width: 200px;
+  }
+  .duvidas{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 50px;
+ 
+}
+.duvidas:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  margin-top: -50px;
+  font-size: 25px;
+  
+
+}
+.duvida p {
+  margin-top: 40px;
+}
   </style>
 </head>
+<header>
+  <h4>Acesse sua conta  atraves do nosso sistema</h4>
+  <h5>  SimpleTech </h5>
+
+
+
+
+  <div id="divb">
+    <span class="material-symbols-outlined" id="burger">☰</span>
+    <div class="menu" id="menu">
+
+      <div class="duvida" onclick="window.location.href = 'inicio.html';">
+        <p id="pagina">Pagina inicial</p>
+    </div>
+    
+     <div class="duvidas" onclick="window.location.href = 'tutorial.html'">
+
+       <p> como usar o SIMPLE XP </p>
+      </div>
+      <div class="duvidas" onclick="window.location.href='index.html'">
+        <P> Ir para o caixa eletrônico</P>
+      </div>
+   <div class="duvidas" onclick="window.location.href='sobrenos.html'">
+    <p> Sobre nos </p>
+   </div>
+   <div class="duvidas" onclick="window.location.href='contatos.html'">
+    <p>Contatos </p>
+   </div>
+    <div class="duvidas" onclick="window.location.href='faq.html'">
+      <p >FAQ</p>
+    </div>
+    </div>
+
+  </div>
+  <div id="logo">
+    <img  src="BUwQtAL - Imgur (2).png" alt="Logo">
+  </div>
+
+</header>
 <body>
   <div class="container">
     <h1>Tutorial Completo: Utilizando o Caixa Eletrônico</h1>
     <p>Este tutorial abrangente irá guiá-lo através de todas as etapas para utilizar o caixa eletrônico com segurança e eficácia.</p>
     
-    <h2>Passo 1: Insira Seu Cartão</h2>
-    <p>Para iniciar uma transação, insira seu cartão no leitor de cartão, garantindo que o chip esteja virado para baixo e na direção indicada na máquina.</p>
-    <img src="exemplo_imagem_cartao.png" alt="Inserindo o Cartão">
+    
+<h2>Passo 1: Digite o Número da Sua Conta</h2>
+<p>O número da sua conta está localizado no verso do seu cartão.</p>
+    <img src="Cartão-Caixa-1-scaled.jpg" alt="Inserindo o Cartão">
 
-    <h2>Passo 2: Digite Seu PIN</h2>
-    <p>Digite seu PIN (Número de Identificação Pessoal) usando o teclado numérico do caixa eletrônico.</p>
-    <img src="exemplo_teclado.png" alt="Teclado Numérico">
+    
+<h2>Passo 2: Pressione o Botão Verde</h2>
+<p>Após inserir o número da sua conta, pressione o botão verde para confirmar e prosseguir com a transação.</p>
+<img src="quanto-posso-sacar-no-caixa-eletronicoaaaaaaaa.jpg" alt="Teclado Numérico">
+<h2>Passo 3: Aguarde até que o Número da Sua Conta seja Validado</h2>
+
+<p>Enquanto isso, respire profundamente e mantenha-se tranquilo. Logo estaremos prontos para prosseguir com segurança.</p>
+    <img src="maxresdefaulttt.jpg" alt="Teclado Numérico">
 
     <h2>Passo 3: Selecione a Operação Desejada</h2>
     <p>No menu de transações, escolha a operação desejada, como saque, depósito, consulta de saldo, entre outras.</p>
@@ -60,9 +182,42 @@
     <p>Após selecionar a operação, siga as instruções na tela do caixa eletrônico para concluir a transação.</p>
     <img src="exemplo_instrucoes_tela.png" alt="Instruções na Tela">
 
-    <h2>Passo 5: Retire Seu Cartão e Recibo</h2>
-    <p>Após concluir a transação, retire seu cartão e qualquer recibo emitido pelo caixa eletrônico.</p>
+    <h2>Passo 5:clique nao opção fechar conta e Retire Recibo</h2>
+    <p>Após concluir a transação, feche sua conta  e qualquer recibo emitido pelo caixa eletrônico.</p>
     <img src="exemplo_recibo.png" alt="Recibo">
   </div>
 </body>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  const burgerIcon = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+
+  // Adiciona um event listener para o clique no ícone do menu
+  burgerIcon.addEventListener('click', function(event) {
+      // Impede que o evento de clique se propague para o documento
+      event.stopPropagation();
+      
+      // Toggles o menu (abre/fecha)
+      toggleMenu();
+  });
+
+  // Adiciona um event listener para o clique fora do menu para fechá-lo
+  document.addEventListener('click', function(event) {
+      // Verifica se o clique ocorreu fora do menu
+      if (!menu.contains(event.target) && menu.style.display === 'block') {
+          // Fecha o menu se estiver aberto
+          menu.style.display = 'none';
+      }
+  });
+
+  // Função para alternar a exibição do menu
+  function toggleMenu() {
+      if (menu.style.display === 'block') {
+          menu.style.display = 'none';
+      } else {
+          menu.style.display = 'block';
+      }
+  }
+});
+
+</script>
 </html>

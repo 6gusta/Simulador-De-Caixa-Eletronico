@@ -1,0 +1,155 @@
+@media screen and (max-width: 600px){ 
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        background-image: url(WhatsApp%20Image%202024-03-09%20at%2016.14.41.jpeg);
+    
+    }
+      
+      .container {
+        max-width: 250px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .menu {
+        display: none;
+        position: absolute;
+        margin-top: 23px;
+        margin-left: 5px;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 390px;
+        height: 520px;
+    }
+    .duvidas{
+      border-bottom: 1px solid black;
+      width: 400px;
+      height: 50px;
+     
+    }
+    .duvidas:hover{
+      background-color: rgba(169, 169, 169, 0.39);
+    }
+    .duvida:hover{
+      background-color: rgba(169, 169, 169, 0.39);
+    }
+    .duvida{
+      border-bottom: 1px solid black;
+      width: 400px;
+      height: 60px;
+      background-color: #007bff;
+      color: white;
+      margin-top: -50px;
+      font-size: 25px;
+      
+    
+    }
+    .duvida p {
+      margin-top: 40px;
+    }
+    #pagina {
+      margin-top: 40px;
+    }
+    
+    
+      header{
+        background-color: #0056b3;
+        width: 100%;
+        height: 100px;
+        background-image: url(WhatsApp%20Image%202024-03-09%20at%2016.09.43.jpeg);
+       
+      }
+      #burger{
+        font-family: 'Material Symbols Outlined', sans-serif;
+        margin-left: 30px;
+        color:rgb(233, 183, 139);
+      font-size: 40px;
+      margin-top: 100px;
+      cursor: pointer;
+        
+        
+    
+      }
+      #divb{
+        margin-top: -200px;
+        width: 200px;
+      }
+      .icon {
+        color: transparent; /* Torna o ícone sem cor */
+      }
+     
+      
+      h1, h2, p {
+        margin-bottom: 20px;
+      }
+      h4{
+        margin-left: 420px;
+        color: white;
+        
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+      h5{
+        color:rgb(233, 183, 139);
+        font-size: 28px;
+        
+    
+        margin-left: 260px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 10px;
+      }
+      #logo{
+        
+          margin-left: 150px;
+          margin-top: -60px;
+       
+      }
+    
+      
+      .button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #b{
+        margin-top: 40px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 10px;
+        font-size: 20px;
+
+      }
+      #b:hover{
+        background-color: #0056b3;
+    
+      }
+      
+      .button:hover {
+        background-color: #0056b3;
+      }
+      
+      .help-box {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        text-align: left
+      }
+        
+    
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sobrenos.css">
+</head>
+<header>
+    <h4>Acesse sua conta  atraves do nosso sistema</h4>
+    <h5>  SimpleTech </h5>
+  
+  
+  
+  
+    <div id="divb">
+      <span class="material-symbols-outlined" id="burger">☰</span>
+      <div class="menu" id="menu">
+  
+        <div class="duvida" onclick="window.location.href = 'inicio.html';">
+          <p id="pagina">Pagina inicial</p>
+      </div>
+      
+       <div class="duvidas" onclick="window.location.href = 'tutorial.html'">
+  
+         <p> como usar o SIMPLE XP </p>
+        </div>
+        <div class="duvidas" onclick="window.location.href='index.html'">
+          <P> Ir para o caixa eletrônico</P>
+        </div>
+     <div class="duvidas" onclick="window.location.href='sobrenos.html'">
+      <p> Sobre nos </p>
+     </div>
+     <div class="duvidas" onclick="window.location.href='contatos.html'">
+      <p>Contatos </p>
+     </div>
+      <div class="duvidas" onclick="window.location.href='faq.html'">
+        <p >FAQ</p>
+      </div>
+      </div>
+  
+    </div>
+    <div id="logo">
+      <img  src="BUwQtAL - Imgur (2).png" alt="Logo">
+    </div>
+  
+  </header>
+<body>
+    <div class="description">
+        <p class="heading">A SimpleTech é uma empresa que desenvolve e vende software para caixas eletrônicos.</p>
+        <p class="heading">Missão:</p>
+        <p>Nossa missão é fornecer soluções inovadoras e confiáveis que atendam às necessidades de nossos clientes e facilitem a vida dos usuários de caixas eletrônicos.</p>
+        
+        <p class="heading">Nosso único produto, o <span class="company-highlight">SimpleATM</span>, é um software completo e fácil de usar que oferece uma ampla gama de recursos, incluindo:</p>
+        
+        <ul class="features">
+          <li class="feature">Saques em dinheiro</li>
+          <li class="feature">Transferências de fundos</li>
+          <li class="feature">Pagamentos de contas</li>
+          <li class="feature">Recargas de celular</li>
+          <li class="feature">Saldo e extrato</li>
+          <li class="feature">Consulta de cheques</li>
+          <li class="feature">Troca de senha</li>
+        </ul>
+        
+        <p>O <span class="company-highlight">SimpleATM</span> é compatível com diversos modelos de caixas eletrônicos e pode ser personalizado para atender às necessidades específicas de cada cliente.</p>
+        
+        <p class="heading">Descrição da Empresa</p>
+        
+        <p>A SimpleTech foi fundada em 2023 por um grupo de estudantes interessados na área de desenvolvimento e segurança da informação. A empresa está sediada em Luziânia, Goiás, e possui uma equipe de 3 funcionários.</p>
+      </div>
+      
+      
+    
+</body>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const burgerIcon = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+  
+    // Adiciona um event listener para o clique no ícone do menu
+    burgerIcon.addEventListener('click', function(event) {
+        // Impede que o evento de clique se propague para o documento
+        event.stopPropagation();
+        
+        // Toggles o menu (abre/fecha)
+        toggleMenu();
+    });
+  
+    // Adiciona um event listener para o clique fora do menu para fechá-lo
+    document.addEventListener('click', function(event) {
+        // Verifica se o clique ocorreu fora do menu
+        if (!menu.contains(event.target) && menu.style.display === 'block') {
+            // Fecha o menu se estiver aberto
+            menu.style.display = 'none';
+        }
+    });
+  
+    // Função para alternar a exibição do menu
+    function toggleMenu() {
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+  });
+  
+  </script>
+
+</html>

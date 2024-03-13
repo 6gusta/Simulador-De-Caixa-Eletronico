@@ -6,6 +6,45 @@
   <link rel="stylesheet" href="faq.css">
   <title>FAQ - Simplestech</title>
 </head>
+<header>
+  <h4>Acesse sua conta  atraves do nosso sistema</h4>
+  <h5>  SimpleTech </h5>
+
+
+
+
+  <div id="divb">
+    <span class="material-symbols-outlined" id="burger">☰</span>
+    <div class="menu" id="menu">
+
+      <div class="duvida" onclick="window.location.href = 'inicio.html';">
+        <p id="pagina">Pagina inicial</p>
+    </div>
+    
+     <div class="duvidas" onclick="window.location.href = 'tutorial.html'">
+
+       <p> como usar o SIMPLE XP </p>
+      </div>
+      <div class="duvidas" onclick="window.location.href='index.html'">
+        <P> Ir para o caixa eletrônico</P>
+      </div>
+   <div class="duvidas" onclick="window.location.href='sobrenos.html'">
+    <p> Sobre nos </p>
+   </div>
+   <div class="duvidas" onclick="window.location.href='contatos.html'">
+    <p>Contatos </p>
+   </div>
+    <div class="duvidas" onclick="window.location.href='faq.html'">
+      <p >FAQ</p>
+    </div>
+    </div>
+
+  </div>
+  <div id="logo">
+    <img  src="BUwQtAL - Imgur (2).png" alt="Logo">
+  </div>
+
+</header>
 <body>
   <h1>FAQ - Perguntas Frequentes</h1>
 
@@ -29,6 +68,39 @@
 
   <a href="inicio.html">Voltar para a página inicial</a>
 </body>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  const burgerIcon = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+
+  // Adiciona um event listener para o clique no ícone do menu
+  burgerIcon.addEventListener('click', function(event) {
+      // Impede que o evento de clique se propague para o documento
+      event.stopPropagation();
+      
+      // Toggles o menu (abre/fecha)
+      toggleMenu();
+  });
+
+  // Adiciona um event listener para o clique fora do menu para fechá-lo
+  document.addEventListener('click', function(event) {
+      // Verifica se o clique ocorreu fora do menu
+      if (!menu.contains(event.target) && menu.style.display === 'block') {
+          // Fecha o menu se estiver aberto
+          menu.style.display = 'none';
+      }
+  });
+
+  // Função para alternar a exibição do menu
+  function toggleMenu() {
+      if (menu.style.display === 'block') {
+          menu.style.display = 'none';
+      } else {
+          menu.style.display = 'block';
+      }
+  }
+});
+
+</script>
 </html>
 [12:04, 06/03/2024] Gusta: <h2>Precisa de Ajuda?</h2>
         <p>Se você precisar de assistência durante o uso do caixa eletrônico, nossa equipe está aqui para ajudar.</p>
