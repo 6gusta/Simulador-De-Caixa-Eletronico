@@ -1,0 +1,387 @@
+@media screen and (max-width: 600px){
+    #caixa{
+        width: 100%;
+        height: 700px;
+        background-color:blue;
+        margin-left: 27%;
+        margin-top: 20px;
+     
+        margin-top: -5px;
+    }
+    #tela{
+        width: 1000px;
+        height: 170px;
+        background-color:white;
+        margin-top: -590px;
+        margin-left: 555px;
+        border: 50px solid gray;
+    }
+    #cima{
+        background-color:blue;
+        
+        width: 1000%;
+        height: 80px;
+        margin-left: 505px;
+        margin-top: 20px;
+    }
+    #MINICAIXA{
+        background-color: #007bff;
+        width: 500px;
+        height: 50px;
+        margin-left: 140px;
+        text-align: center;
+        font-size: 50px;
+        margin-top: -30px;
+        color: white;
+        
+    }
+    #tela input {
+        /* Adicione propriedades CSS para mover o input para a esquerda */
+        margin-left: 100px; /* Altere o valor conforme necessário */
+        margin-top: 40px;
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    
+    #teclado{
+        background-color: white;
+        width: 300px;
+        height: 110px;
+        margin-left: 690px;
+        margin-top: 1px;
+        border: 20px solid gray;
+    
+    }
+    #cor{
+        width: 40px;
+        height: 5px;
+        background-color: green;
+    }
+    #cor2{
+        width: 40px;
+        height: 5px;
+        background-color: yellow;
+    }
+    #cor3{
+        width: 40px;
+        height: 5px;
+        background-color: red;
+    }
+    #b1{
+        width: 30px;
+        height: 30px;
+        margin-top: 170px;
+        margin-left: 60px;
+       
+    
+    }
+    #b2{
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+    #b3{
+        width: 30px;
+        height: 30px;
+        margin-left: 60px;
+        margin-top: 10PX;
+    }
+    #b4{
+        width: 30px;
+        height: 30px;
+        margin-left: 60px;
+        margin-top: 10px;
+    
+    }
+    #b5{
+        width: 30px;
+        height: 30px;
+        margin-left:190px;
+       
+    }
+    #bb5{
+        width: 30px;
+        height: 30px;
+        margin-left:920px;
+        margin-top: -151px;
+        
+    }
+    #b6{
+        width: 30px;
+        height: 30px;
+        margin-left: 1110px;
+        margin-top: 10px;
+     
+    }
+    #b7{
+        width: 30px;
+        height: 30px;
+        margin-left: 1110px;
+        margin-top: 10px;
+    }
+    #b8{
+        width: 30px;
+        height: 30px;
+        margin-left: 1110px;
+        margin-top: 10px;
+    }
+    #b1:hover{
+        background-color: azure;
+    }
+    #b2:hover{
+        background-color: azure;
+    }
+    #b3:hover{
+        background-color: azure;
+    }
+    #b4:hover{
+        background-color: azure;
+    }
+    #b5:hover{
+        background-color: azure;
+    }
+    #b6:hover{
+        background-color: azure;
+    }
+    #b7:hover{
+        background-color: azure;
+    }
+    #b8:hover{
+        background-color: azure;
+    }
+    #t1{
+        width: 25px;
+        height: 25px;
+    }
+    #t2{
+        width: 25px;
+        height: 25px;
+    }
+    #t3{
+        width: 25px;
+        height: 25px;
+    }
+    #t4{
+        width: 25px;
+        height: 25px;
+        margin-left: 30px;
+        
+    }
+    #tt4{
+        margin-top: -75px;
+    }
+    #t5{
+    
+            width: 25px;
+            height: 25px;
+            margin-left: 30px;
+      
+    }
+    #t6{
+        margin-left: 30px;
+        width: 25px;
+        height: 25px
+    }
+    
+    #t7{
+        margin-left: 60px;
+        width: 25px;
+        height: 25px;
+    
+    }
+    H1{
+       color: white;
+       text-align: center;
+    }
+    
+    #tt7{
+      margin-top:-75px ;
+    }
+    #t8{
+     
+            margin-left: 60px;
+            width: 25px;
+            height: 25px
+      
+    }
+    #t9{
+     
+        margin-left: 60px;
+        width: 25px;
+        height: 25px
+    
+    }
+    #t10{
+     
+       
+        width: 25px;
+        height: 30px
+    
+    }
+    #t11{
+        margin-left: 30px;
+        margin-top: -20px;
+          
+        width: 25px;
+        height: 30px
+    }
+    #tt11{
+        margin-top: -25px;
+    }
+    #t12{
+        margin-left: 60px;
+        margin-top: -40px;
+          
+        width: 25px;
+        height: 30px
+    }
+    #tt12{
+        margin-top: -25px;
+    
+    
+    }
+    #bt2{
+        margin-top: -40px;
+    
+        
+    }
+    .button{
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 1700px;
+        margin-top: -50px;
+        width: 190px;
+    }
+    header {
+        background-color: #0056b3;
+        width: 435px;
+        height: 100px;
+        /* Defina a imagem de fundo */
+        background-image: url('BUwQtAL - Imgur (1)1.png');
+        /* Configure a posição da imagem de fundo */
+        background-position: 60% 50%;  /* Você pode ajustar para top, bottom, left, right, etc. */
+        /* Configure o tamanho da imagem de fundo */
+         /* A imagem cobrirá todo o cabeçalho */
+        /* Evite que a imagem de fundo se repita */
+        background-repeat: no-repeat;
+    }
+    #burger{
+        font-family: 'Material Symbols Outlined', sans-serif;
+        margin-left: 10px;
+        color:rgb(233, 183, 139);
+      font-size: 40px;
+      margin-top: 120px;
+      cursor: pointer;
+        
+        
+    
+      }
+      h4{
+      margin-left: 420px;
+     
+      
+    }
+    h5{
+        color:rgb(233, 183, 139);
+        font-size: 23px;
+        
+    
+        margin-left: 287px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 10px;
+      }
+      #logo{
+      margin-left: 230px;
+      margin-top: -90px;
+    } .menu {
+    display: none;
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 5px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 390px;
+    height: 520px;
+    }
+    #divb{
+    margin-top: -80px;
+    width: 200px;
+    }
+    #burger{
+      font-family: 'Material Symbols Outlined', sans-serif;
+      margin-left: 20px;
+      color:rgb(233, 183, 139);
+    font-size: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+      
+      
+    
+    
+    }
+    .duvidas{
+      border-bottom: 1px solid black;
+      width: 400px;
+      height: 50px;
+     
+    }
+    .duvidas:hover{
+      background-color: rgba(169, 169, 169, 0.39);
+    }
+    .duvida:hover{
+      background-color: rgba(169, 169, 169, 0.39);
+    }
+    .duvida{
+      border-bottom: 1px solid black;
+      width: 400px;
+      height: 60px;
+      background-color: #007bff;
+      color: white;
+      margin-top: -50px;
+      font-size: 25px;
+      
+    
+    }
+    .duvida p {
+      margin-top: 40px;
+    }
+    
+    #entrar{
+        margin-left: 90px;
+        margin-top: -52px;
+        height: 35px;
+        margin-top: 0px;
+        width: 60px;
+        color: green;
+    
+    }
+    #trar{
+        margin-top: -105px;
+    }
+    #apagar{
+        margin-left: 90px;
+        width: 60px;
+        height: 35px;
+        margin-top: 0px;
+    }
+    #cancelar{
+        margin-left: 90px;
+        width: 60px;
+        height: 35px;
+        margin-top: 0px;
+    
+    
+    }
+    
+    
+    
+}

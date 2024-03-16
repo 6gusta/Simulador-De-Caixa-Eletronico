@@ -1,0 +1,120 @@
+@media screen and (max-width: 600px){
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      ol {
+        margin-bottom: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #0056b3;
+        width: 435px;
+        height: 100px;
+        /* Defina a imagem de fundo */
+        background-image: url('BUwQtAL - Imgur (1)1.png');
+        /* Configure a posição da imagem de fundo */
+        background-position: 60% 50%;  /* Você pode ajustar para top, bottom, left, right, etc. */
+        /* Configure o tamanho da imagem de fundo */
+         /* A imagem cobrirá todo o cabeçalho */
+        /* Evite que a imagem de fundo se repita */
+        background-repeat: no-repeat;
+    }
+    #burger{
+        font-family: 'Material Symbols Outlined', sans-serif;
+        margin-left: 10px;
+        color:rgb(233, 183, 139);
+      font-size: 40px;
+      margin-top: 120px;
+      cursor: pointer;
+        
+        
+    
+      }
+      h4{
+      margin-left: 420px;
+     
+      
+    }
+    h5{
+        color:rgb(233, 183, 139);
+        font-size: 23px;
+        
+    
+        margin-left: 287px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 10px;
+      }
+      #logo{
+      margin-left: 230px;
+      margin-top: -90px;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      margin-top: 23px;
+      margin-left: 5px;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 390px;
+      height: 520px;
+  }
+  #divb{
+      margin-top: -80px;
+      width: 200px;
+    }
+    .duvidas{
+    border-bottom: 1px solid black;
+    width: 400px;
+    height: 50px;
+   
+  }
+  .duvidas:hover{
+    background-color: rgba(169, 169, 169, 0.39);
+  }
+  .duvida:hover{
+    background-color: rgba(169, 169, 169, 0.39);
+  }
+  .duvida{
+    border-bottom: 1px solid black;
+    width: 400px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    margin-top: -50px;
+    font-size: 25px;
+    
+  
+  }
+  .duvida p {
+    margin-top: 40px;
+  }
+   
+ }
