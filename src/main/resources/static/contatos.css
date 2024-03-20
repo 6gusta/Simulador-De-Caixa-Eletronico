@@ -9,27 +9,16 @@ header {
   background-repeat: no-repeat;
   background-position: 84% 50%;
 }
-
-h4 {
-  margin-left: 420px;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h5 {
-  color:rgb(233, 183, 139);
-  font-size: 35px;
-  margin-left: 1620px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-top: 10px;
-}
-
-#logo {
-  margin-left: 1500px;
-  margin-top: -90px;
-}
+   
 #burger{
   font-family: 'Material Symbols Outlined', sans-serif;
-  margin-left: 70px;
+  margin-left: 10px;
   color:rgb(233, 183, 139);
 font-size: 60px;
 margin-top: -20px;
@@ -38,3 +27,30 @@ cursor: pointer;
   
 
 }
+.duvidas{
+    border-bottom: 1px solid black;
+    width: 400px;
+    height: 50px;
+    
+   
+  }
+  .duvidas:hover{
+    background-color: rgba(169, 169, 169, 0.39);
+  }
+  .duvida:hover{
+    background-color: rgba(169, 169, 169, 0.39);
+  }
+  .duvida{
+    border-bottom: 1px solid black;
+    width: 400px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    margin-top: -50px;
+    font-size: 25px;
+    
+  
+  }
+  .duvida p {
+    margin-top: 40px;
+  }

@@ -68,6 +68,14 @@ margin-left: 420px;
 color: white;
 
 }
+#faq-content {
+  /* Seus estilos aqui */
+  margin-top: 20px;
+  padding: 20px;
+  margin-left: 40px;
+ 
+}
+
 h5{
 color:rgb(233, 183, 139);
 font-size: 35px;

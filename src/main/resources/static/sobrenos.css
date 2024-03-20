@@ -1,110 +1,132 @@
-/* Estilos para o texto */
-.description {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333; /* Cor do texto */
-  }
-  
-  /* Estilos para os cabeçalhos */
-  .heading {
-    font-weight: bold;
-    margin-bottom: 10px; /* Espaçamento abaixo dos cabeçalhos */
-  }
-  
-  /* Estilos para a lista de recursos */
-  .features {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  /* Estilos para os itens da lista de recursos */
-  .feature {
-    margin-bottom: 5px; /* Espaçamento entre os itens */
-  }
-  
-  /* Estilos para destacar a empresa */
-  .company-highlight {
-    color
-    : #007bff; /* Cor para destacar o nome da empresa */
-  }
-  header{
-    background-color: #0056b3;
-    width: 100%;
-    height: 100px;
-    background-image: url(BUwQtAL\ -\ Imgur\ \(2\).png);
-    background-repeat: no-repeat;
-    background-position: 84% 50%;
-   
-  }
-  #burger{
-    font-family: 'Material Symbols Outlined', sans-serif;
-    margin-left: 70px;
-    color:rgb(233, 183, 139);
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  font-size: 20px; /* Aumenta o tamanho da fonte para 25 pixels */
+  margin-bottom: 20px; /* Define a margem inferior padrão */
+ 
+}
+.description{
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+ol {
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#burger {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  margin-left: 70px;
+  color: rgb(233, 183, 139);
   font-size: 60px;
   margin-top: -80px;
   cursor: pointer;
-    
-    
-
-  }
-    h4{
-    margin-left: 420px;
-    color: white;
-    
-  }
-  h5{
-    color:rgb(233, 183, 139);
-    font-size: 35px;
-    
-
-    margin-left: 1620px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 10px;
-  }
-    #logo{
-    margin-left: 1500px;
-    margin-top: -90px;
-  }
-  .duvidas{
-    border-bottom: 1px solid black;
-    width: 400px;
-    height: 50px;
-   
-  }
-  .duvidas:hover{
-    background-color: rgba(169, 169, 169, 0.39);
-  }
-  .duvida:hover{
-    background-color: rgba(169, 169, 169, 0.39);
-  }
-  .duvida{
-    border-bottom: 1px solid black;
-    width: 400px;
-    height: 60px;
-    background-color: #007bff;
-    color: white;
-    margin-top: -50px;
-    font-size: 25px;
-    
-  
-  }
-  .duvida p {
-    margin-top: 40px;
-  }
-  .menu {
-    display: none;
-    position: absolute;
-    margin-top: 23px;
-    margin-left: 5px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    width: 390px;
-    height: 520px;
 }
-#divb{
-    margin-top: -130px;
-    width: 200px;
-  }
-  
+
+header {
+  background-color: #0056b3;
+  width: 100%;
+  height: 100px;
+  background-image: url(BUwQtAL\ -\ Imgur\ \(2\).png);
+  background-repeat: no-repeat;
+  background-position: 84% 50%;
+}
+
+h4 {
+  margin-left: 420px;
+  color: black;
+}
+
+h5 {
+  color: rgb(233, 183, 139);
+  font-size: 35px;
+  margin-left: 1620px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 10px;
+}
+
+#logo {
+  margin-left: 150px;
+  margin-top: -90px;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  margin-top: 23px;
+  margin-left: 5px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 390px;
+  height: 520px;
+}
+
+#divb {
+  margin-top: -100px;
+  width: 200px;
+}
+
+.duvidas {
+  border-bottom: 1px solid black;
+  width: 380px;
+  height: 50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.duvidas:hover {
+  background-color: rgba(169, 169, 169, 0.39);
+}
+
+.duvida:hover {
+  background-color: rgba(169, 169, 169, 0.39);
+}
+
+.duvida {
+  border-bottom: 1px solid black;
+  width: 380px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  margin-top: -50px;
+  font-size: 25px;
+}
+
+.duvida p {
+  margin-top: 40px;
+}
