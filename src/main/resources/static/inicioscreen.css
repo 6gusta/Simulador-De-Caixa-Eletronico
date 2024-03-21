@@ -9,13 +9,14 @@
     }
       
       .container {
-        max-width: 250px;
+        max-width: 350px;
         margin: 50px auto;
         padding: 20px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
+        margin-left: 1opx;
       }
       .menu {
         display: none;
@@ -126,6 +127,10 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        margin-bottom: 40px;
+        width: 150px;
+        height: 40px;
+        font-size: 20px;
       }
       #b{
         margin-top: 40px;

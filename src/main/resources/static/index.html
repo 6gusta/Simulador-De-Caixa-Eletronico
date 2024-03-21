@@ -33,9 +33,7 @@
          <div class="duvidas" onclick="window.location.href='sobrenos.html'">
           <p> Sobre nos </p>
          </div>
-         <div class="duvidas" onclick="window.location.href='contatos.html'">
-          <p>Contatos </p>
-         </div>
+     
           <div class="duvidas" onclick="window.location.href='faq.html'">
             <p >FAQ</p>
           </div>
@@ -58,27 +56,27 @@
  </div>
 
  <div id="caixa">
-    <button id="b1" type="button"></button>
+    <button id="b1" type="button" class="botao"></button>
     <div>
-        <button id="b2" type="button"></button>
+        <button id="b2" type="button "  class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button"></button>
+        <button id="b3" type="button"  class="botao"></button>
     </div>
     <div>
-        <button  id="b4" type="button"></button>
+        <button  id="b4" type="button"  class="botao"></button>
     </div>
     <div id="bb5">
-        <button id="b5" type="button"></button>
+        <button id="b5" type="button"  class="botao"></button>
     </div>
     <div>
-        <button id="b6" type="button"></button>
+        <button id="b6" type="button"  class="botao"></button>
     </div>
     <div>
-        <button id="b7" type="button"></button>
+        <button id="b7" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b8" type="button"></button>
+        <button id="b8" type="button" class="botao"></button>
     </div>
     <div id="re"></div>
 
@@ -87,7 +85,13 @@
  </div>
 
  <div id="tela">
-        <input id="mensagem" type="password" required placeholder="Digite o número da sua conta">
+   
+  
+   <p id="me"> Bem-vindo ao Simple ATM  </p> <br>
+   <p id="mes">  Operações bancárias simples e rápidas</p> <br>
+   <p id="mes">    Controle financeiro conveniente</p> <br>
+   <p id="mes"> Segurança e praticidade em suas transações</p>
+   <input id="mensagem" type="password" required placeholder="Digite o número da sua conta">
  </div>
 
  <div id="teclado">
@@ -133,7 +137,7 @@
 
             </div>
         </button>
-        
+      
     </div>
     <div>
         <button id="apagar" type="button">apagar 
@@ -184,6 +188,22 @@
         }
     }
   });
+
+  const buttons = document.querySelectorAll('.botao');
+
+// Adiciona um event listener para cada botão
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove a classe 'ativo' de todos os botões
+        buttons.forEach(btn => {
+            btn.classList.remove('ativo');
+        });
+        // Adiciona a classe 'ativo' apenas ao botão clicado
+        this.classList.add('ativo');
+    });
+});
+
+
   
   </script>
 </html>

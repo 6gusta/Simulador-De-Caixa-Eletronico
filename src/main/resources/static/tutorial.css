@@ -47,6 +47,8 @@ header{
     background-image: url(BUwQtAL\ -\ Imgur\ \(2\).png);
     background-repeat: no-repeat;
     background-position: 84% 50%;
+    position: fixed;
+    margin-top: -20px;
    
   }
 
@@ -81,7 +83,7 @@ h5{
   height: 520px;
 }
 #divb{
-  margin-top: -130px;
+  margin-top: -150px;
   width: 200px;
 }
 .duvidas{

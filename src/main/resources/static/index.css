@@ -1,56 +1,69 @@
 #caixa{
     width: 100%;
-    height: 700px;
+    height: 1100px;
     background-color:blue;
-    margin-left: 27%;
+   
     margin-top: 20px;
  
-    margin-top: -5px;
+    margin-top: 0px;
 }
 #tela{
     width: 1000px;
-    height: 170px;
+    height: 500px;
     background-color:white;
-    margin-top: -590px;
-    margin-left: 555px;
-    border: 50px solid gray;
+    margin-top: -1100px;
+    margin-left: 300px;
+    border: 150px solid gray;
+  
 }
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
 #cima{
-    background-color:blue;
+    background-color: #0056b3;
     
-    width: 1000%;
+ 
     height: 80px;
-    margin-left: 505px;
+
+   
     margin-top: 20px;
 }
 #MINICAIXA{
     background-color: #007bff;
     width: 500px;
-    height: 50px;
-    margin-left: 140px;
+    height: 70px;
+    margin-left: 700px;
     text-align: center;
-    font-size: 50px;
+    font-size: 90px;
     margin-top: -30px;
     color: white;
     
 }
+/* Estilo para o botão ativo */
+.botao.ativo {
+    background-color: azure;
+    /* Adicione outros estilos conforme necessário */
+}
+
 #tela input {
     /* Adicione propriedades CSS para mover o input para a esquerda */
-    margin-left: 100px; /* Altere o valor conforme necessário */
-    margin-top: 40px;
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
+    margin-left: 220px; /* Altere o valor conforme necessário */
+    margin-top: -50px;
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
 }
 
 
 #teclado{
     background-color: white;
-    width: 300px;
-    height: 110px;
-    margin-left: 690px;
+    width: 700px;
+    height: 200px;
+    margin-left: 550px;
     margin-top: 1px;
-    border: 20px solid gray;
+    border: 50px solid gray;
 
 }
 #cor{
@@ -69,91 +82,310 @@
     background-color: red;
 }
 #b1{
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
     margin-top: 170px;
-    margin-left: 60px;
+    margin-left: 330px;
+    cursor: pointer;
    
 
 }
 #b2{
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 60px;
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 330px;
+    cursor: pointer;
 }
 #b3{
-    width: 30px;
-    height: 30px;
-    margin-left: 60px;
-    margin-top: 10PX;
+    width: 80px;
+    height: 80px;
+   
+    margin-left: 330px;
+    margin-top: 30PX;
+    cursor: pointer;
 }
 #b4{
-    width: 30px;
-    height: 30px;
-    margin-left: 60px;
-    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+   
+    margin-left: 330px;
+    margin-top: 30px;
+    cursor: pointer;
 
 }
 #b5{
-    width: 30px;
-    height: 30px;
-    margin-left:190px;
+    width: 80px;
+    height: 80px;
+    margin-left:570px;
+    cursor: pointer;
    
 }
 #bb5{
     width: 30px;
     height: 30px;
     margin-left:920px;
-    margin-top: -151px;
+    margin-top: -410px;
     
 }
 #b6{
-    width: 30px;
-    height: 30px;
-    margin-left: 1110px;
-    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    margin-left:1490px;
+    margin-top: 80px;
+    cursor: pointer;
  
 }
 #b7{
-    width: 30px;
-    height: 30px;
-    margin-left: 1110px;
-    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    margin-left:1490px;
+    margin-top: 30px;
+    cursor: pointer;
+ 
 }
 #b8{
+    width: 80px;
+    height: 80px;
+    margin-left:1490px;
+    margin-top: 30px;
+    cursor: pointer;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#t1{
+    width: 25px;
+    height: 25px;
+}
+#caixa{
+    width: 100%;
+    height: 1100px;
+    background-color:blue;
+   
+    margin-top: 20px;
+ 
+    margin-top: 0px;
+}
+#tela{
+    width: 1000px;
+    height: 500px;
+    background-color:white;
+    margin-top: -1100px;
+    margin-left: 300px;
+    border: 150px solid gray;
+
+    background-image: url(Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
+ 
+}
+* {
+    margin: 0;
+    padding: 0;
+
+  }
+  #me{
+    color: white;
+    font-size: 35px;
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+  #mes{
+    color: white;
+    font-size: 25px;
+    margin-left: 30px;
+  }
+#cima{
+    background-color:blue;
+    
+    width: 1000%;
+    height: 80px;
+
+   
+    margin-top: 20px;
+}
+#MINICAIXA{
+    background-color: #007bff;
+    width: 500px;
+    height: 70px;
+    margin-left: 700px;
+    text-align: center;
+    font-size: 90px;
+    margin-top: -30px;
+    color: white;
+    
+}
+/* Estilo para o botão ativo */
+.botao.ativo {
+    background-color: azure;
+    /* Adicione outros estilos conforme necessário */
+}
+
+#tela input {
+    /* Adicione propriedades CSS para mover o input para a esquerda */
+    margin-left: 220px; /* Altere o valor conforme necessário */
+    margin-top: 150px;
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
+}
+
+
+#teclado{
+    background-color: white;
+    width: 700px;
+    height: 200px;
+    margin-left: 550px;
+    margin-top: 1px;
+    border: 50px solid gray;
+
+}
+#cor{
+    width: 40px;
+    height: 5px;
+    background-color: green;
+}
+#cor2{
+    width: 40px;
+    height: 5px;
+    background-color: yellow;
+}
+#cor3{
+    width: 40px;
+    height: 5px;
+    background-color: red;
+}
+#b1{
+    width: 80px;
+    height: 80px;
+    margin-top: 170px;
+    margin-left: 330px;
+    cursor: pointer;
+   
+
+}
+#b2{
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 330px;
+    cursor: pointer;
+}
+#b3{
+    width: 80px;
+    height: 80px;
+   
+    margin-left: 330px;
+    margin-top: 30PX;
+    cursor: pointer;
+}
+#b4{
+    width: 80px;
+    height: 80px;
+   
+    margin-left: 330px;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+#b5{
+    width: 80px;
+    height: 80px;
+    margin-left:570px;
+    cursor: pointer;
+   
+}
+#bb5{
     width: 30px;
     height: 30px;
-    margin-left: 1110px;
-    margin-top: 10px;
+    margin-left:920px;
+    margin-top: -410px;
+    
 }
-#b1:hover{
-    background-color: azure;
+#b6{
+    width: 80px;
+    height: 80px;
+    margin-left:1490px;
+    margin-top: 80px;
+    cursor: pointer;
+ 
 }
-#b2:hover{
-    background-color: azure;
+#b7{
+    width: 80px;
+    height: 80px;
+    margin-left:1490px;
+    margin-top: 30px;
+    cursor: pointer;
+ 
 }
-#b3:hover{
-    background-color: azure;
+#b8{
+    width: 80px;
+    height: 80px;
+    margin-left:1490px;
+    margin-top: 30px;
+    cursor: pointer;
+    
+    
 }
-#b4:hover{
-    background-color: azure;
-}
-#b5:hover{
-    background-color: azure;
-}
-#b6:hover{
-    background-color: azure;
-}
-#b7:hover{
-    background-color: azure;
-}
-#b8:hover{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#b1:hover,
+#b2:hover,
+#b3:hover,
+#b4:hover,
+#b5:hover,
+#b6:hover,
+#b7:hover,
+#b8:hover {
     background-color: azure;
 }
 #t1{
     width: 25px;
     height: 25px;
+}
+.botao.ativo {
+    background-color: azure;
 }
 #t2{
     width: 25px;
@@ -372,5 +604,196 @@ cursor: pointer;
 
 
 }
+
+
+
+#t2{
+    width: 25px;
+    height: 25px;
+}
+#t3{
+    width: 25px;
+    height: 25px;
+}
+#t4{
+    width: 25px;
+    height: 25px;
+    margin-left: 30px;
+    
+}
+#tt4{
+    margin-top: -75px;
+}
+#t5{
+
+        width: 25px;
+        height: 25px;
+        margin-left: 30px;
+  
+}
+#t6{
+    margin-left: 30px;
+    width: 25px;
+    height: 25px
+}
+
+#t7{
+    margin-left: 60px;
+    width: 25px;
+    height: 25px;
+
+}
+H1{
+   color: white;
+   text-align: center;
+}
+
+#tt7{
+  margin-top:-75px ;
+}
+#t8{
+ 
+        margin-left: 60px;
+        width: 25px;
+        height: 25px
+  
+}
+#t9{
+ 
+    margin-left: 60px;
+    width: 25px;
+    height: 25px
+
+}
+#t10{
+ 
+   
+    width: 25px;
+    height: 30px
+
+}
+#t11{
+    margin-left: 30px;
+    margin-top: -20px;
+      
+    width: 25px;
+    height: 30px
+}
+#tt11{
+    margin-top: -25px;
+}
+#t12{
+    margin-left: 60px;
+    margin-top: -40px;
+      
+    width: 25px;
+    height: 30px
+}
+#tt12{
+    margin-top: -25px;
+
+
+}
+#bt2{
+    margin-top: -40px;
+
+    
+}
+.button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 1700px;
+    margin-top: -50px;
+    width: 190px;
+}
+header{
+    background-color: #0056b3;
+    width: 100%;
+    height: 100px;
+    background-image: url(BUwQtAL\ -\ Imgur\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: 84% 50%;
+   
+}
+html,body{
+    margin: 0;
+    padding: 0;
+
+  }
+
+h4{
+margin-left: 420px;
+color: white;
+
+}
+h5{
+color:rgb(233, 183, 139);
+font-size: 35px;
+
+
+margin-left: 1620px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin-top: 10px;
+}
+#logo{
+margin-left: 1500px;
+margin-top: -90px;
+}
+.menu {
+display: none;
+position: absolute;
+margin-top: 23px;
+margin-left: 5px;
+background-color: #fff;
+padding: 10px;
+border: 1px solid #ccc;
+width: 390px;
+height: 520px;
+}
+#divb{
+margin-top: -60px;
+width: 200px;
+}
+#burger{
+  font-family: 'Material Symbols Outlined', sans-serif;
+  margin-left: 70px;
+  color:rgb(233, 183, 139);
+font-size: 60px;
+margin-top: -20px;
+cursor: pointer;
+}
+.duvidas{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 50px;
+ 
+}
+.duvidas:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  margin-top: -50px;
+  font-size: 25px;
+  
+
+}
+.duvida p {
+  margin-top: 40px;
+}
+
+
 
 
