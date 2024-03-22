@@ -7,22 +7,14 @@
  
     margin-top: 0px;
 }
-#tela{
-    width: 1000px;
-    height: 500px;
-    background-color:white;
-    margin-top: -1100px;
-    margin-left: 300px;
-    border: 150px solid gray;
-  
-}
+
 * {
     margin: 0;
     padding: 0;
   
   }
 #cima{
-    background-color: #0056b3;
+    background-color: blue;
     
  
     height: 80px;
@@ -50,7 +42,7 @@
 #tela input {
     /* Adicione propriedades CSS para mover o input para a esquerda */
     margin-left: 220px; /* Altere o valor conforme necessário */
-    margin-top: -50px;
+    margin-top:  20px;
     width: 500px;
     height: 60px;
     font-size: 25px;
@@ -67,19 +59,23 @@
 
 }
 #cor{
-    width: 40px;
-    height: 5px;
+    width: 100px;
+    height: 10px;
     background-color: green;
+    margin-left: 100px;
 }
 #cor2{
-    width: 40px;
-    height: 5px;
+    width: 100px;
+    height: 10px;
     background-color: yellow;
+    margin-left: 100px;
 }
 #cor3{
-    width: 40px;
-    height: 5px;
+    width: 100px;
+    height: 10px;
     background-color: red;
+    margin-left: 100px;
+
 }
 #b1{
     width: 80px;
@@ -155,40 +151,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#t1{
-    width: 25px;
-    height: 25px;
-}
-#caixa{
-    width: 100%;
-    height: 1100px;
-    background-color:blue;
-   
-    margin-top: 20px;
- 
-    margin-top: 0px;
-}
 #tela{
     width: 1000px;
     height: 500px;
@@ -200,11 +162,7 @@
     background-image: url(Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
  
 }
-* {
-    margin: 0;
-    padding: 0;
 
-  }
   #me{
     color: white;
     font-size: 35px;
@@ -216,252 +174,20 @@
     font-size: 25px;
     margin-left: 30px;
   }
-#cima{
-    background-color:blue;
-    
-    width: 1000%;
-    height: 80px;
-
-   
-    margin-top: 20px;
-}
-#MINICAIXA{
-    background-color: #007bff;
-    width: 500px;
-    height: 70px;
-    margin-left: 700px;
-    text-align: center;
-    font-size: 90px;
-    margin-top: -30px;
-    color: white;
-    
-}
-/* Estilo para o botão ativo */
-.botao.ativo {
-    background-color: azure;
-    /* Adicione outros estilos conforme necessário */
-}
-
-#tela input {
-    /* Adicione propriedades CSS para mover o input para a esquerda */
-    margin-left: 220px; /* Altere o valor conforme necessário */
-    margin-top: 150px;
-    width: 500px;
-    height: 60px;
-    font-size: 25px;
-}
-
-
-#teclado{
-    background-color: white;
-    width: 700px;
-    height: 200px;
-    margin-left: 550px;
-    margin-top: 1px;
-    border: 50px solid gray;
-
-}
-#cor{
-    width: 40px;
-    height: 5px;
-    background-color: green;
-}
-#cor2{
-    width: 40px;
-    height: 5px;
-    background-color: yellow;
-}
-#cor3{
-    width: 40px;
-    height: 5px;
-    background-color: red;
-}
-#b1{
-    width: 80px;
-    height: 80px;
-    margin-top: 170px;
-    margin-left: 330px;
-    cursor: pointer;
-   
-
-}
-#b2{
-    width: 80px;
-    height: 80px;
-    margin-top: 30px;
-    margin-left: 330px;
-    cursor: pointer;
-}
-#b3{
-    width: 80px;
-    height: 80px;
-   
-    margin-left: 330px;
-    margin-top: 30PX;
-    cursor: pointer;
-}
-#b4{
-    width: 80px;
-    height: 80px;
-   
-    margin-left: 330px;
-    margin-top: 30px;
-    cursor: pointer;
-
-}
-#b5{
-    width: 80px;
-    height: 80px;
-    margin-left:570px;
-    cursor: pointer;
-   
-}
-#bb5{
-    width: 30px;
-    height: 30px;
-    margin-left:920px;
-    margin-top: -410px;
-    
-}
-#b6{
-    width: 80px;
-    height: 80px;
-    margin-left:1490px;
-    margin-top: 80px;
-    cursor: pointer;
- 
-}
-#b7{
-    width: 80px;
-    height: 80px;
-    margin-left:1490px;
-    margin-top: 30px;
-    cursor: pointer;
- 
-}
-#b8{
-    width: 80px;
-    height: 80px;
-    margin-left:1490px;
-    margin-top: 30px;
-    cursor: pointer;
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#b1:hover,
-#b2:hover,
-#b3:hover,
-#b4:hover,
-#b5:hover,
-#b6:hover,
-#b7:hover,
-#b8:hover {
-    background-color: azure;
-}
 #t1{
-    width: 25px;
-    height: 25px;
+    width: 135px;
+    height: 55px;
+    margin-left: 0px;
 }
 .botao.ativo {
     background-color: azure;
-}
-#t2{
-    width: 25px;
-    height: 25px;
-}
-#t3{
-    width: 25px;
-    height: 25px;
-}
-#t4{
-    width: 25px;
-    height: 25px;
-    margin-left: 30px;
-    
-}
-#tt4{
-    margin-top: -75px;
-}
-#t5{
-
-        width: 25px;
-        height: 25px;
-        margin-left: 30px;
-  
-}
-#t6{
-    margin-left: 30px;
-    width: 25px;
-    height: 25px
-}
-
-#t7{
-    margin-left: 60px;
-    width: 25px;
-    height: 25px;
-
 }
 H1{
    color: white;
    text-align: center;
 }
 
-#tt7{
-  margin-top:-75px ;
-}
-#t8{
- 
-        margin-left: 60px;
-        width: 25px;
-        height: 25px
-  
-}
-#t9{
- 
-    margin-left: 60px;
-    width: 25px;
-    height: 25px
 
-}
-#t10{
- 
-   
-    width: 25px;
-    height: 30px
-
-}
-#t11{
-    margin-left: 30px;
-    margin-top: -20px;
-      
-    width: 25px;
-    height: 30px
-}
-#tt11{
-    margin-top: -25px;
-}
 #t12{
     margin-left: 60px;
     margin-top: -40px;
@@ -469,11 +195,7 @@ H1{
     width: 25px;
     height: 30px
 }
-#tt12{
-    margin-top: -25px;
 
-
-}
 #bt2{
     margin-top: -40px;
 
@@ -500,30 +222,10 @@ header{
     background-position: 84% 50%;
    
 }
-  html,body{
-    margin: 0;
-    padding: 0;
-
-  }
-
-h4{
-margin-left: 420px;
-color: white;
-
-}
-h5{
-color:rgb(233, 183, 139);
-font-size: 35px;
 
 
-margin-left: 1620px;
-font-family: Georgia, 'Times New Roman', Times, serif;
-margin-top: 10px;
-}
-#logo{
-margin-left: 1500px;
-margin-top: -90px;
-}
+
+
 .menu {
 display: none;
 position: absolute;
@@ -535,10 +237,7 @@ border: 1px solid #ccc;
 width: 390px;
 height: 520px;
 }
-#divb{
-margin-top: -130px;
-width: 200px;
-}
+
 #burger{
   font-family: 'Material Symbols Outlined', sans-serif;
   margin-left: 70px;
@@ -579,28 +278,31 @@ cursor: pointer;
 }
 
 #entrar{
-    margin-left: 90px;
+    margin-left: 400px;
     margin-top: -52px;
-    height: 35px;
-    margin-top: 0px;
-    width: 60px;
+    height: 75px;
+    margin-top: -20px;
+    width: 300px;
     color: green;
+    font-size: 25px;
 
 }
 #trar{
-    margin-top: -105px;
+    margin-top: -195px;
 }
 #apagar{
-    margin-left: 90px;
-    width: 60px;
-    height: 35px;
+    margin-left: 400px;   
+    width: 300px;
+    height: 70px;
     margin-top: 0px;
+    font-size: 25px;
 }
 #cancelar{
-    margin-left: 90px;
-    width: 60px;
-    height: 35px;
+    margin-left: 400px;   
+    width: 300px;
+    height: 70px;
     margin-top: 0px;
+    font-size: 25px;    
 
 
 }
@@ -608,40 +310,52 @@ cursor: pointer;
 
 
 #t2{
-    width: 25px;
-    height: 25px;
+    width: 135px;
+    height: 55px;
+    margin-left: 0px;
 }
 #t3{
-    width: 25px;
-    height: 25px;
+    width: 135px;
+    height: 55px;
+    margin-left: 0px;
 }
 #t4{
-    width: 25px;
-    height: 25px;
-    margin-left: 30px;
+    width: 135px;
+    height: 55px;
+    margin-left: 130px;
     
 }
 #tt4{
-    margin-top: -75px;
+    margin-top: -165px;
 }
 #t5{
-
-        width: 25px;
-        height: 25px;
-        margin-left: 30px;
+    width: 135px;
+    height: 55px;
+    margin-left: 130px;
   
 }
 #t6{
-    margin-left: 30px;
-    width: 25px;
-    height: 25px
+    width: 135px;
+    height: 55px;
+    margin-left: 130px;
 }
 
 #t7{
-    margin-left: 60px;
-    width: 25px;
-    height: 25px;
+    margin-left: 265px;
+  
+    width: 135px;
+    height: 55px;
 
+}
+#tt8{
+    margin-top: -15px;
+}
+#t8{
+    margin-left: 265px;
+  
+    width: 135px;
+    height: 55px;
+ 
 }
 H1{
    color: white;
@@ -649,82 +363,59 @@ H1{
 }
 
 #tt7{
-  margin-top:-75px ;
-}
-#t8{
+  margin-top:-165px ;
+
  
-        margin-left: 60px;
-        width: 25px;
-        height: 25px
+    width: 135px;
+    height: 70px;
   
 }
 #t9{
  
-    margin-left: 60px;
-    width: 25px;
-    height: 25px
+    margin-left: 265px;
+ 
+    width: 135px;
+    height: 55px;
+    margin-top: 0px;
+
+}
+#tt10{
+    margin-top: 0px;
+    
 
 }
 #t10{
  
    
-    width: 25px;
-    height: 30px
+    width: 132px;
+    height: 50px;
+
+    
 
 }
 #t11{
-    margin-left: 30px;
-    margin-top: -20px;
-      
-    width: 25px;
-    height: 30px
+    margin-left: 130px;
+    margin-top: 50px;
+    width: 135px;
+    height: 50px;
 }
 #tt11{
-    margin-top: -25px;
+    margin-top: -102px;
 }
 #t12{
-    margin-left: 60px;
-    margin-top: -40px;
-      
-    width: 25px;
-    height: 30px
+    margin-left: 265px;
+    margin-top: -px;
+    width: 135px;
+    height: 50px
 }
 #tt12{
-    margin-top: -25px;
+    margin-top:-35px;
 
 
 }
-#bt2{
-    margin-top: -40px;
 
-    
-}
-.button{
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 1700px;
-    margin-top: -50px;
-    width: 190px;
-}
-header{
-    background-color: #0056b3;
-    width: 100%;
-    height: 100px;
-    background-image: url(BUwQtAL\ -\ Imgur\ \(2\).png);
-    background-repeat: no-repeat;
-    background-position: 84% 50%;
-   
-}
-html,body{
-    margin: 0;
-    padding: 0;
 
-  }
+
 
 h4{
 margin-left: 420px;
@@ -759,40 +450,9 @@ height: 520px;
 margin-top: -60px;
 width: 200px;
 }
-#burger{
-  font-family: 'Material Symbols Outlined', sans-serif;
-  margin-left: 70px;
-  color:rgb(233, 183, 139);
-font-size: 60px;
-margin-top: -20px;
-cursor: pointer;
-}
-.duvidas{
-  border-bottom: 1px solid black;
-  width: 400px;
-  height: 50px;
- 
-}
-.duvidas:hover{
-  background-color: rgba(169, 169, 169, 0.39);
-}
-.duvida:hover{
-  background-color: rgba(169, 169, 169, 0.39);
-}
-.duvida{
-  border-bottom: 1px solid black;
-  width: 400px;
-  height: 60px;
-  background-color: #007bff;
-  color: white;
-  margin-top: -50px;
-  font-size: 25px;
-  
 
-}
-.duvida p {
-  margin-top: 40px;
-}
+
+
 
 
 
