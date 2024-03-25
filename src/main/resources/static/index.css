@@ -33,11 +33,7 @@
     color: white;
     
 }
-/* Estilo para o botão ativo */
-.botao.ativo {
-    background-color: azure;
-    /* Adicione outros estilos conforme necessário */
-}
+
 
 #tela input {
     /* Adicione propriedades CSS para mover o input para a esquerda */
@@ -122,6 +118,7 @@
     height: 30px;
     margin-left:920px;
     margin-top: -410px;
+    cursor: pointer;
     
 }
 #b6{
@@ -179,9 +176,7 @@
     height: 55px;
     margin-left: 0px;
 }
-.botao.ativo {
-    background-color: azure;
-}
+
 H1{
    color: white;
    text-align: center;
@@ -221,6 +216,9 @@ header{
     background-repeat: no-repeat;
     background-position: 84% 50%;
    
+}
+button:hover{
+    background-color: black;
 }
 
 
@@ -277,6 +275,7 @@ cursor: pointer;
   margin-top: 40px;
 }
 
+
 #entrar{
     margin-left: 400px;
     margin-top: -52px;
@@ -285,6 +284,7 @@ cursor: pointer;
     width: 300px;
     color: green;
     font-size: 25px;
+    cursor: pointer;
 
 }
 #trar{
@@ -296,6 +296,7 @@ cursor: pointer;
     height: 70px;
     margin-top: 0px;
     font-size: 25px;
+    cursor: pointer;
 }
 #cancelar{
     margin-left: 400px;   
@@ -303,6 +304,7 @@ cursor: pointer;
     height: 70px;
     margin-top: 0px;
     font-size: 25px;    
+    cursor: pointer;
 
 
 }
@@ -313,31 +315,36 @@ cursor: pointer;
     width: 135px;
     height: 55px;
     margin-left: 0px;
+    cursor: pointer;
 }
 #t3{
     width: 135px;
     height: 55px;
     margin-left: 0px;
+    cursor: pointer;
 }
 #t4{
     width: 135px;
     height: 55px;
     margin-left: 130px;
+    cursor: pointer;
     
 }
 #tt4{
     margin-top: -165px;
+    cursor: pointer;
 }
 #t5{
     width: 135px;
     height: 55px;
     margin-left: 130px;
-  
+    cursor: pointer;
 }
 #t6{
     width: 135px;
     height: 55px;
     margin-left: 130px;
+    cursor: pointer;
 }
 
 #t7{
@@ -345,16 +352,19 @@ cursor: pointer;
   
     width: 135px;
     height: 55px;
+    cursor: pointer;
 
 }
 #tt8{
     margin-top: -15px;
+    cursor: pointer;
 }
 #t8{
     margin-left: 265px;
   
     width: 135px;
     height: 55px;
+    cursor: pointer;
  
 }
 H1{
@@ -364,6 +374,7 @@ H1{
 
 #tt7{
   margin-top:-165px ;
+  cursor: pointer;
 
  
     width: 135px;
@@ -377,10 +388,12 @@ H1{
     width: 135px;
     height: 55px;
     margin-top: 0px;
+    cursor: pointer;
 
 }
 #tt10{
     margin-top: 0px;
+    cursor: pointer;
     
 
 }
@@ -389,6 +402,7 @@ H1{
    
     width: 132px;
     height: 50px;
+    cursor: pointer;
 
     
 
@@ -398,6 +412,7 @@ H1{
     margin-top: 50px;
     width: 135px;
     height: 50px;
+    cursor: pointer;
 }
 #tt11{
     margin-top: -102px;
@@ -406,7 +421,8 @@ H1{
     margin-left: 265px;
     margin-top: -px;
     width: 135px;
-    height: 50px
+    height: 50px;
+    cursor: pointer;
 }
 #tt12{
     margin-top:-35px;

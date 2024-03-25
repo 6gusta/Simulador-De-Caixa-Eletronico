@@ -56,7 +56,7 @@
  </div>
 
  <div id="caixa">
-    <button id="b1" type="button" class="botao"></button>
+    <button id="b1"class="botao"></button>
     <div>
         <button id="b2" type="button "  class="botao"></button>
     </div>
@@ -132,7 +132,7 @@
         <button id="t12" type="button">+</button>
     </div>
     <div id="trar">
-        <button id="entrar" >ENTRAR
+        <button id="entrar" class="" type="button" >ENTRAR
             <div id="cor">
 
             </div>
@@ -188,20 +188,11 @@
         }
     }
   });
+ 
 
-  const buttons = document.querySelectorAll('.botao');
 
-// Adiciona um event listener para cada botão
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        // Remove a classe 'ativo' de todos os botões
-        buttons.forEach(btn => {
-            btn.classList.remove('ativo');
-        });
-        // Adiciona a classe 'ativo' apenas ao botão clicado
-        this.classList.add('ativo');
-    });
-});
+
+
 
 
   

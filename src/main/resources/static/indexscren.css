@@ -1,43 +1,50 @@
 @media screen and (max-width: 600px){
     #caixa{
-        width: 100%;
+        width: 435px;
         height: 700px;
         background-color:blue;
-        margin-left: 27%;
+       
         margin-top: 20px;
      
         margin-top: -5px;
     }
     #tela{
-        width: 1000px;
-        height: 170px;
+        width: 335px;
+        height: 380px;
         background-color:white;
-        margin-top: -590px;
-        margin-left: 555px;
+        margin-top: -730px;
+       
         border: 50px solid gray;
+        margin-left: 0px;
+    }
+    #me{
+        font-size: 20px;
+    }
+    #mes{
+        font-size: 15px;
     }
     #cima{
         background-color:blue;
         
-        width: 1000%;
+        width: 435px;
         height: 80px;
-        margin-left: 505px;
+        margin-left: 0px;
         margin-top: 20px;
     }
     #MINICAIXA{
         background-color: #007bff;
-        width: 500px;
+        width: 435px;
         height: 50px;
-        margin-left: 140px;
+        margin-left: 0px;
         text-align: center;
-        font-size: 50px;
+        font-size: 40px;
         margin-top: -30px;
         color: white;
         
     }
     #tela input {
         /* Adicione propriedades CSS para mover o input para a esquerda */
-        margin-left: 100px; /* Altere o valor conforme necessário */
+        margin-left: 20px; /* Altere o valor conforme necessário */
         margin-top: 40px;
         width: 300px;
         height: 40px;
@@ -49,31 +56,35 @@
         background-color: white;
         width: 300px;
         height: 110px;
-        margin-left: 690px;
+ 
+        margin-left: 50px;
         margin-top: 1px;
         border: 20px solid gray;
     
     }
     #cor{
-        width: 40px;
+        width: 90px;
         height: 5px;
         background-color: green;
+        margin-left: 0px;
     }
     #cor2{
-        width: 40px;
+        width: 90px;
         height: 5px;
         background-color: yellow;
+        margin-left: 0px;
     }
     #cor3{
-        width: 40px;
+        width: 90px;
         height: 5px;
         background-color: red;
+        margin-left: 0px;
     }
     #b1{
         width: 30px;
         height: 30px;
-        margin-top: 170px;
-        margin-left: 60px;
+        margin-top: 90px;
+        margin-left: 10px;
        
     
     }
@@ -81,51 +92,51 @@
         width: 30px;
         height: 30px;
         margin-top: 10px;
-        margin-left: 60px;
+        margin-left: 10px;
     }
     #b3{
         width: 30px;
         height: 30px;
-        margin-left: 60px;
+        margin-left: 10px;
         margin-top: 10PX;
     }
     #b4{
         width: 30px;
         height: 30px;
-        margin-left: 60px;
+        margin-left: 10px;
         margin-top: 10px;
     
     }
     #b5{
         width: 30px;
         height: 30px;
-        margin-left:190px;
+        margin-left:0px;
        
     }
     #bb5{
         width: 30px;
         height: 30px;
-        margin-left:920px;
-        margin-top: -151px;
+        margin-left:395px;
+        margin-top: -160px;
         
     }
     #b6{
         width: 30px;
         height: 30px;
-        margin-left: 1110px;
+        margin-left: 395px;
         margin-top: 10px;
      
     }
     #b7{
         width: 30px;
         height: 30px;
-        margin-left: 1110px;
+        margin-left: 395px;
         margin-top: 10px;
     }
     #b8{
         width: 30px;
         height: 30px;
-        margin-left: 1110px;
+        margin-left: 395px;
         margin-top: 10px;
     }
     #b1:hover{
@@ -153,21 +164,22 @@
         background-color: azure;
     }
     #t1{
-        width: 25px;
+        width:55px;
         height: 25px;
     }
     #t2{
-        width: 25px;
+        width: 55px;
         height: 25px;
+        margin-left: 55px;
     }
     #t3{
-        width: 25px;
+        width: 55px;
         height: 25px;
     }
     #t4{
-        width: 25px;
+        width: 55px;
         height: 25px;
-        margin-left: 30px;
+        margin-left: 55px;
         
     }
     #tt4{
@@ -175,20 +187,20 @@
     }
     #t5{
     
-            width: 25px;
+            width: 55px;
             height: 25px;
-            margin-left: 30px;
+            margin-left: 0px;
       
     }
     #t6{
-        margin-left: 30px;
-        width: 25px;
+        margin-left: 55px;
+        width: 55px;
         height: 25px
     }
     
     #t7{
-        margin-left: 60px;
-        width: 25px;
+        margin-left: 110px;
+        width: 55px;
         height: 25px;
     
     }
@@ -202,40 +214,46 @@
     }
     #t8{
      
-            margin-left: 60px;
-            width: 25px;
-            height: 25px
+            margin-left: 110px;
+            width: 55px;
+            height: 25px;
+            margin-top: -45px;
+            
+            
       
+    }
+    #tt8{
+        margin-top: -44px;
     }
     #t9{
      
-        margin-left: 60px;
-        width: 25px;
+        margin-left: 110px;
+        width: 55px;
         height: 25px
     
     }
     #t10{
      
        
-        width: 25px;
+        width: 55px;
         height: 30px
     
     }
     #t11{
-        margin-left: 30px;
+        margin-left: 55px;
         margin-top: -20px;
           
-        width: 25px;
+        width: 55px;
         height: 30px
     }
     #tt11{
-        margin-top: -25px;
+        margin-top: -30px;
     }
     #t12{
-        margin-left: 60px;
+        margin-left: 110px;
         margin-top: -40px;
           
-        width: 25px;
+        width: 55px;
         height: 30px
     }
     #tt12{
@@ -286,6 +304,7 @@
       }
       h4{
       margin-left: 420px;
+      color: black;
      
       
     }
@@ -313,7 +332,7 @@
     height: 520px;
     }
     #divb{
-    margin-top: -80px;
+    margin-top: -30px;
     width: 200px;
     }
     #burger{
@@ -356,28 +375,31 @@
     }
     
     #entrar{
-        margin-left: 90px;
+        margin-left: 170px;
         margin-top: -52px;
         height: 35px;
         margin-top: 0px;
-        width: 60px;
+        width: 130px;
         color: green;
+        font-size: 20px;
     
     }
     #trar{
         margin-top: -105px;
     }
     #apagar{
-        margin-left: 90px;
-        width: 60px;
+        margin-left: 170px;
+        width: 130px;
         height: 35px;
         margin-top: 0px;
+        font-size: 20px;
     }
     #cancelar{
-        margin-left: 90px;
-        width: 60px;
+        margin-left: 170px;
+        width: 130px;
         height: 35px;
         margin-top: 0px;
+        font-size: 20px;
     
     
     }
