@@ -78,75 +78,82 @@
     height: 80px;
     margin-top: 170px;
     margin-left: 330px;
-    cursor: pointer;
    
-
 }
-#b2{
+
+#b2 {
     width: 80px;
     height: 80px;
     margin-top: 30px;
     margin-left: 330px;
-    cursor: pointer;
+    cursor: pointer; /* Adicionando cursor pointer */
+   /* Definindo uma cor de fundo para teste */
 }
-#b3{
+
+#b3 {
     width: 80px;
     height: 80px;
-   
-    margin-left: 330px;
-    margin-top: 30PX;
-    cursor: pointer;
-}
-#b4{
-    width: 80px;
-    height: 80px;
-   
     margin-left: 330px;
     margin-top: 30px;
-    cursor: pointer;
-
+ 
+    cursor: pointer; /* Adicionando cursor pointer */
 }
-#b5{
+
+#b4 {
     width: 80px;
     height: 80px;
-    margin-left:570px;
-    cursor: pointer;
-   
+    margin-left: 330px;
+    margin-top: 30px;
+    cursor: pointer; /* Adicionando cursor pointer */
 }
+
+#b5 {
+    width: 80px;
+    height: 80px;
+    margin-left: 570px;
+    cursor: pointer; /* Adicionando cursor pointer */
+}
+
 #bb5{
     width: 30px;
     height: 30px;
-    margin-left:920px;
-    margin-top: -410px;
-    cursor: pointer;
-    
-}
-#b6{
-    width: 80px;
-    height: 80px;
-    margin-left:1490px;
-    margin-top: 80px;
-    cursor: pointer;
- 
-}
-#b7{
-    width: 80px;
-    height: 80px;
-    margin-left:1490px;
-    margin-top: 30px;
-    cursor: pointer;
- 
-}
-#b8{
-    width: 80px;
-    height: 80px;
-    margin-left:1490px;
-    margin-top: 30px;
-    cursor: pointer;
-    
+    margin-left: 920px;
+    margin-top: -410px; /* Evite margens negativas se possível */
     
 }
 
+#b6{
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 80px;
+    
+}
+
+#b7{
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 30px;
+    
+}
+
+.botao {
+
+
+    cursor: pointer;
+  
+   
+    
+}
+
+#b8{
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 30px;
+    cursor: ;
+}
 
 #tela{
     width: 1000px;
@@ -218,7 +225,7 @@ header{
    
 }
 button:hover{
-    background-color: black;
+    background-color: white;
 }
 
 
@@ -435,7 +442,7 @@ H1{
 
 h4{
 margin-left: 420px;
-color: white;
+color: black;
 
 }
 h5{

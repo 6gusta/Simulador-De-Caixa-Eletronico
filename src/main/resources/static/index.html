@@ -56,16 +56,17 @@
  </div>
 
  <div id="caixa">
-    <button id="b1"class="botao"></button>
+    <button id="b1" type="button" class="botao"></button>
     <div>
-        <button id="b2" type="button "  class="botao"></button>
+        <button id="b2" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button"  class="botao"></button>
+        <button id="b3" type="button" class="botao"></button>
     </div>
     <div>
-        <button  id="b4" type="button"  class="botao"></button>
+        <button id="b4" type="button" class="botao"></button>
     </div>
+    
     <div id="bb5">
         <button id="b5" type="button"  class="botao"></button>
     </div>
@@ -96,43 +97,43 @@
 
  <div id="teclado">
     <div>
-        <button id="t1" type="button">1</button>
+        <button id="t1" type="button" class="botao">1</button>
     </div>
     <div>
-        <button id="t2" type="button">4</button>
+        <button id="t2" type="button" class="botao">4</button>
     </div>
     <div>
-        <button id="t3" type="button">7</button>
+        <button id="t3" type="button"  class="botao">7</button>
     </div>
     <div id="tt4">
-        <button  id="t4" type="button">2</button>
+        <button  id="t4" type="button"  class="botao">2</button>
     </div>
     <div>
-        <button id="t5" type="button">5</button>
+        <button id="t5" type="button"  class="botao">5</button>
     </div>
     <div>
-        <button id="t6" type="button">8</button>
+        <button id="t6" type="button"  class="botao">8</button>
     </div>
     <div id="tt7">
-        <button id="t7" type="button">3</button>
+        <button id="t7" type="button"  class="botao">3</button>
     </div>
     <div id="tt8">
-        <button id="t8" type="button">6</button>
+        <button id="t8" type="button"  class="botao">6</button>
     </div>
     <div>
-        <button id="t9" type="button">9</button>
+        <button id="t9" type="button"  class="botao">9</button>
     </div>
     <div id="tt10">
-        <button id="t10" type="button"></button>
+        <button id="t10" type="button"  class="botao"></button>
     </div>
     <div id="tt11">
-        <button id="t11" type="button">0</button>
+        <button id="t11" type="button"  class="botao">0</button>
     </div>
     <div id="tt12">
-        <button id="t12" type="button">+</button>
+        <button id="t12" type="button"  class="botao">+</button>
     </div>
     <div id="trar">
-        <button id="entrar" class="" type="button" >ENTRAR
+        <button id="entrar"  type="button"  class="botao">ENTRAR
             <div id="cor">
 
             </div>
@@ -140,14 +141,14 @@
       
     </div>
     <div>
-        <button id="apagar" type="button">APAGAR
+        <button id="apagar" type="button"  class="botao">APAGAR
             <div id="cor2">
 
             </div>
         </button>
     </div>
     <div>
-        <button id="cancelar" type="button">CANCELA
+        <button id="cancelar" type="button" class="botao">CANCELA
             <div id="cor3">
 
             </div>
@@ -187,13 +188,47 @@
             menu.style.display = 'block';
         }
     }
+    function changeColor(event, color) {
+    var buttons = document.getElementsByClassName('botao');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = '';
+    }
+    event.target.style.backgroundColor = color;
+}
+// Adicionando o evento de clique para todos os botões com a classe 'botao'
+var buttons = document.getElementsByClassName('botao');
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function(event) {
+        changeColor(event, 'lightblue'); // Você pode definir a cor que desejar aqui
+    });
+}
+document.getElementById('b3').addEventListener('click', function() {
+    console.log('Botão b2 clicado!');
+});
+
+
   });
+ 
  
 
 
 
 
+function changeColor(color) {
+    var buttons = document.getElementsByClassName('botao');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = '';
+    }
+    event.target.style.backgroundColor = color;
+}
 
+// Adicionando event listeners aos botões do teclado
+var tecladoButtons = document.querySelectorAll('#teclado button');
+tecladoButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        changeColor('lightblue');
+    });
+});
 
   
   </script>

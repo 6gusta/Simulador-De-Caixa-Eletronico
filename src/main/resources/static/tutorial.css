@@ -87,31 +87,28 @@ h5{
   width: 200px;
 }
 .duvidas{
-border-bottom: 1px solid black;
-width: 400px;
-height: 50px;
-
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 50px;
+ 
 }
 .duvidas:hover{
-background-color: rgba(169, 169, 169, 0.39);
+  background-color: rgba(169, 169, 169, 0.39);
 }
 .duvida:hover{
-background-color: rgba(169, 169, 169, 0.39);
+  background-color: rgba(169, 169, 169, 0.39);
 }
 .duvida{
-border-bottom: 1px solid black;
-width: 400px;
-height: 60px;
-background-color: #007bff;
-color: white;
-margin-top: -50px;
-font-size: 25px;
-
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  margin-top: -50px;
+  font-size: 25px;
+  
 
 }
 .duvida p {
-margin-top: 40px;
-}
-p{
-  font-size: 25px;
+  margin-top: 40px;
 }
