@@ -479,6 +479,38 @@ height: 520px;
 #divb{
 margin-top: -60px;
 width: 200px;
+color: white;
+}
+#y0{
+    background-color: grey;
+    width: 200px;
+    height: 60px;
+    color: white;
+    margin-top: 50px;
+    margin-left: 750px;
+}
+#y1{
+    background-color: grey;
+    width: 200px;
+    height: 60px;
+    color: white;
+    margin-top: 60px;
+    margin-left: 750px;
+}
+
+#y2{
+    background-color: grey;
+    width: 200px;
+    height: 60px;
+    color: white;
+    margin-top: 40px;
+}
+#y3{
+    background-color: grey;
+    width: 200px;
+    height: 60px;
+    color: white;
+    margin-top: 40px;
 }
 
 
