@@ -301,14 +301,14 @@ cursor: pointer;
     text-align: center;
 }
 #trar{
-    margin-top: 420px;
+    margin-top: 265px;
     position: relative;
 }
 #apagar{
     margin-left: 400px;   
     width: 300px;
     height: 70px;
-    margin-top: -200px;
+    margin-top: 0px;
     font-size: 25px;
     cursor: pointer;
 }
@@ -323,7 +323,7 @@ cursor: pointer;
 
 }
 #pg{
-    margin-top: -115px;
+    margin-top: -140px;
 }
 
 
@@ -482,7 +482,63 @@ height: 520px;
 #divb{
 margin-top: -60px;
 width: 200px;
+color: white;
 }
+/* Estilo para a div #y0 */
+#y0 {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin-top: 80px;
+    margin: 0 auto; /* Centraliza a div */
+    text-align: center;
+    margin-left: 600px;
+}
+
+/* Estilo para a div #y1 */
+#y1 {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin-top: 20px; /* Espaçamento entre #y0 e #y1 */
+    margin: 0 auto; /* Centraliza a div */
+    text-align: center;
+    margin-left: 600px;
+}
+
+/* Estilo para a div #y2 */
+#y2 {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin-top: -90px; /* Espaçamento entre #y1 e #y2 */
+    margin: 0 auto; /* Centraliza a div */
+    text-align: center;
+    margin-left: -50px;
+}
+
+/* Estilo para a div #y3 */
+#y3 {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin-top:70px; /* Espaçamento entre #y2 e #y3 */
+    margin: 0 auto; /* Centraliza a div */
+    text-align: center;
+    margin-left: -50px;
+
+}
+
+
+/* Estilo para os elementos <p> */
+.op {
+    font-size: 25px;
+}
+
 
 
 

@@ -284,7 +284,7 @@ cursor: pointer;
 
 
 #entrar{
-    margin-left: 400px;
+    margin-left: 550px;
     margin-top: -52px;
     height: 75px;
     margin-top: -20px;
@@ -301,8 +301,11 @@ cursor: pointer;
     text-align: center;
 }
 #trar{
-    margin-top: -195px;
+    margin-top: 175px;
     position: relative;
+}
+#pg{
+    margin-top: -140px;
 }
 #apagar{
     margin-left: 400px;   
