@@ -301,7 +301,7 @@ cursor: pointer;
     text-align: center;
 }
 #trar{
-    margin-top: 265px;
+    margin-top: 272px;
     position: relative;
 }
 #apagar{
@@ -484,60 +484,69 @@ margin-top: -60px;
 width: 200px;
 color: white;
 }
-/* Estilo para a div #y0 */
-#y0 {
+/* Estilo para as divs #y0, #y1, #y2, #y3 */
+/* Estilo para a div #sacar */
+#sacar {
     background-color: grey;
     width: 300px;
     height: 70px;
     color: white;
-    margin-top: 80px;
-    margin: 0 auto; /* Centraliza a div */
+    margin: 20px auto;
     text-align: center;
-    margin-left: 600px;
+    margin-left: -10px;
+    margin-top: 60px;
 }
 
-/* Estilo para a div #y1 */
-#y1 {
+/* Estilo para a div #depositar */
+#depositar {
     background-color: grey;
     width: 300px;
     height: 70px;
     color: white;
-    margin-top: 20px; /* Espaçamento entre #y0 e #y1 */
-    margin: 0 auto; /* Centraliza a div */
+    margin: 20px auto;
     text-align: center;
-    margin-left: 600px;
+    margin-left: -10px;
+        margin-top: 40px;
 }
 
-/* Estilo para a div #y2 */
-#y2 {
+
+/* Estilo para a div #saldo */
+#saldo {
     background-color: grey;
     width: 300px;
     height: 70px;
     color: white;
-    margin-top: -90px; /* Espaçamento entre #y1 e #y2 */
-    margin: 0 auto; /* Centraliza a div */
+    margin: 20px auto;
     text-align: center;
-    margin-left: -50px;
+    margin-left: 700px;
+    margin-top: -170px;
 }
 
-/* Estilo para a div #y3 */
-#y3 {
+/* Estilo para a div #transferencia */
+#transferencia {
     background-color: grey;
     width: 300px;
     height: 70px;
     color: white;
-    margin-top:70px; /* Espaçamento entre #y2 e #y3 */
-    margin: 0 auto; /* Centraliza a div */
+    margin: 20px auto;
     text-align: center;
-    margin-left: -50px;
-
+    margin-left: 700px;
+    margin-top: 40px;
 }
 
-
-/* Estilo para os elementos <p> */
-.op {
+/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */
+.sacar,
+.depositar,
+.saldo,
+.transferencia {
     font-size: 25px;
+    margin: 0; /* Remove qualquer margem padrão */
+    
 }
+
+
+
+
 
 
 

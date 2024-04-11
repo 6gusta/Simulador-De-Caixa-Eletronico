@@ -484,38 +484,63 @@ margin-top: -60px;
 width: 200px;
 color: white;
 }
-#y0{
+#sacar {
     background-color: grey;
-    width: 200px;
-    height: 60px;
+    width: 300px;
+    height: 70px;
     color: white;
-    margin-top: 50px;
-    margin-left: 750px;
-}
-#y1{
-    background-color: grey;
-    width: 200px;
-    height: 60px;
-    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: -10px;
     margin-top: 60px;
-    margin-left: 750px;
 }
 
-#y2{
+/* Estilo para a div #depositar */
+#depositar {
     background-color: grey;
-    width: 200px;
-    height: 60px;
+    width: 300px;
+    height: 70px;
     color: white;
-    margin-top: 40px;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: -10px;
+        margin-top: 40px;
 }
-#y3{
+
+
+/* Estilo para a div #saldo */
+#saldo {
     background-color: grey;
-    width: 200px;
-    height: 60px;
+    width: 300px;
+    height: 70px;
     color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 700px;
+    margin-top: -170px;
+}
+
+/* Estilo para a div #transferencia */
+#transferencia {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 700px;
     margin-top: 40px;
 }
 
+/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */
+.sacar,
+.depositar,
+.saldo,
+.transferencia {
+    font-size: 25px;
+    margin: 0; /* Remove qualquer margem padrão */
+    
+}
 
 
 
