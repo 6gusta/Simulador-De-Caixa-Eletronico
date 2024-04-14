@@ -3,7 +3,7 @@
     height: 1100px;
     background-color:blue;
    
-    margin-top: 20px;
+    margin-top: 50px;
  
     margin-top: 0px;
 }
@@ -152,7 +152,7 @@
     height: 80px;
     margin-left: 1490px;
     margin-top: 30px;
-    cursor: ;
+    cursor:po ;
 }
 
 #tela{
@@ -482,6 +482,21 @@ height: 520px;
 #divb{
 margin-top: -60px;
 width: 200px;
+}
+#eyeIcon {
+    cursor: pointer; /* Mostra cursor de ponteiro ao passar sobre o ícone */
+    margin-left: 5px; /* Adiciona margem à esquerda para espaçamento */
+}
+
+/* Estilo para o botão (span) */
+#togglePassword {
+    display: inline-flex; /* Garante que o ícone fique ao lado do campo de entrada */
+    align-items: center;
+    padding: 2px;
+    margin-left: -50px;
+    font-size: 25px; /*
+     Adiciona um pouco de padding para espaçamento */
+     color: gray;
 }
 
 

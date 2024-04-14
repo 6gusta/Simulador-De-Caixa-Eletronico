@@ -163,18 +163,18 @@
     margin-left: 300px;
     border: 150px solid gray;
 
-    background-image: url(Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
+    background-image: url(664457db-7000-4930-8562-9c35f694cb4e.webp);
  
 }
 
   #me{
-    color: white;
+    color: black;
     font-size: 35px;
     margin-left: 30px;
     margin-top: 40px;
   }
   #mes{
-    color: white;
+    color:black;
     font-size: 25px;
     margin-left: 30px;
   }
@@ -301,17 +301,14 @@ cursor: pointer;
     text-align: center;
 }
 #trar{
-    margin-top: 275px;
-   
-}
-#pg{
-    margin-top: -140px;
+    margin-top: 505px;
+    position: relative;
 }
 #apagar{
     margin-left: 400px;   
     width: 300px;
     height: 70px;
-    margin-top: 0px;
+    margin-top: -200px;
     font-size: 25px;
     cursor: pointer;
 }
@@ -324,6 +321,9 @@ cursor: pointer;
     cursor: pointer;
 
 
+}
+#pg{
+    margin-top: -115px;
 }
 
 
@@ -482,76 +482,23 @@ height: 520px;
 #divb{
 margin-top: -60px;
 width: 200px;
-color: white;
 }
-#sacar {
-    background-color: grey;
-    width: 300px;
-    height: 70px;
-    color: white;
-    margin: 20px auto;
-    text-align: center;
-    margin-left: -10px;
-    margin-top: 60px;
-    justify-content: center;
+#eyeIcon {
+    cursor: pointer; /* Mostra cursor de ponteiro ao passar sobre o ícone */
+    margin-left: 5px; /* Adiciona margem à esquerda para espaçamento */
+}
+
+/* Estilo para o botão (span) */
+#togglePassword {
+    display: inline-flex; /* Garante que o ícone fique ao lado do campo de entrada */
     align-items: center;
-    display: flex;
+    padding: 2px;
+    margin-left: -50px;
+    font-size: 25px; /*
+     Adiciona um pouco de padding para espaçamento */
+     color: gray;
 }
 
-/* Estilo para a div #depositar */
-#depositar {
-    background-color: grey;
-    width: 300px;
-    height: 70px;
-    color: white;
-    margin: 20px auto;
-    text-align: center;
-    margin-left: -10px;
-        margin-top: 40px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-}
-
-
-/* Estilo para a div #saldo */
-#saldo {
-    background-color: grey;
-    width: 300px;
-    height: 70px;
-    color: white;
-    margin: 20px auto;
-    text-align: center;
-    margin-left: 700px;
-    margin-top: -170px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-/* Estilo para a div #transferencia */
-#transferencia {
-    background-color: grey;
-    width: 300px;
-    height: 70px;
-    color: white;
-    margin: 20px auto;
-    text-align: center;
-    margin-left: 700px;
-    margin-top: 40px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */.sacar,
-.depositar,
-.saldo,
-.transferencia {
-    font-size: 25px;
-    margin: 0; /* Remove qualquer margem padrão */
-    
-}
 
 
 

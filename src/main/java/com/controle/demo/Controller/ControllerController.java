@@ -18,11 +18,7 @@ public class ControllerController {
         return "inicio.html";
     }
     
-    @GetMapping("/inicio")
-    public String inicio(Model model) {
-        // Lógica do método inicio
-        return "index.html";
-    }
+ 
     
 @RestController
 public class VerificarContaController {

@@ -152,7 +152,7 @@
     height: 80px;
     margin-left: 1490px;
     margin-top: 30px;
-    cursor: ;
+    cursor:pointer ;
 }
 
 #tela{
@@ -495,6 +495,9 @@ color: white;
     text-align: center;
     margin-left: -10px;
     margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /* Estilo para a div #depositar */
@@ -507,6 +510,9 @@ color: white;
     text-align: center;
     margin-left: -10px;
         margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
 }
 
 
@@ -520,6 +526,9 @@ color: white;
     text-align: center;
     margin-left: 700px;
     margin-top: -170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /* Estilo para a div #transferencia */
@@ -532,6 +541,9 @@ color: white;
     text-align: center;
     margin-left: 700px;
     margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */
