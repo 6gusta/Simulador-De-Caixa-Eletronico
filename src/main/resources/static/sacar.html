@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>controle</title>
-    
-
-    <link rel="stylesheet" href="opcoes.css">
+   
+ <link rel="stylesheet" href="sacar.css">
 </head>
 <body>
     <header>
@@ -58,8 +57,8 @@
         <button id="b2" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button" class="botao"></button>
-    </div>
+        <button id="b3" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
+
     <div>
         <button id="b4" type="button" class="botao"></button>
     </div>
@@ -71,10 +70,10 @@
         <button id="b6" type="button"  class="botao"></button>
     </div>
     <div>
-        <button id="b7" type="button" class="botao"></button>
+        <button id="b7" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
     </div>
     <div>
-        <button id="b8" type="button" class="botao" onclick="window.location.href='depoisto.html'"></button>
+        <button id="b8" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
     </div>
     <div id="re"></div>
 
@@ -82,30 +81,31 @@
     </div>
  </div>
 
- 
  <div id="tela">
-    <p id="me"> Bem-vindo à sua conta Gustavo  </p>
-    <p id="me"> Escolha uma opção para poder prosseguir </p><br>
+    <p id="me">Escolha o valor que deseja sacar:</p>
+    <p id="me">Em seguida, pressione o botão correspondente ao valor selecionado para continuar.</p><br>
+    
 
     <div id="sacar">
-        <p class="sacar"> SACAR</p>
+        <p class="sacar">R$ 20,00 </p>
     </div>
     <div id="depositar">
-        <p class="depositar"> DEPOSITAR</p>
+        <p class="depositar"> R$ 50,00</p>
     </div>
     <div id="saldo">
-        <p class="saldo"> SALDO</p>
+        <p class="saldo"> R$ 100,00</p>
     </div>
     <div id="transferencia">
-        <p class="transferencia"> TRANSFERÊNCIA</p>
+        <p class="transferencia"> OUTRO VALOR </p>
     </div>
- <div id="trar">
-    <button id="entrar"  type="button"  class="botao" >ENTRAR
-        <div id="cor"></div>
-</button>
- </div>
-   <p id="mensagem"></p>
- </div>
+    <div id="trar">
+        <button id="entrar" type="button" class="botao" >ENTRAR
+            <div id="cor"></div>
+        </button>
+    </div>
+    <p id="mensagem"></p>
+</div>
+
 
  <div id="teclado">
     <div>
@@ -127,7 +127,7 @@
         <button id="t6" type="button"  class="botao">8</button>
     </div>
     <div id="tt7">
-        <button id="t7" type="button"  class="botao">3</button>
+        <button id="t7" type="button"  class="botao" >3</button>
     </div>
     <div id="tt8">
         <button id="t8" type="button"  class="botao">6</button>
@@ -186,13 +186,13 @@
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].style.backgroundColor = '';
             }
-            event.target.style.backgroundColor = color;
+           
         }
 
         var buttons = document.getElementsByClassName('botao');
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener('click', function(event) {
-                changeColor(event, 'lightblue');
+           
             });
         }
 
@@ -225,6 +225,66 @@
             });
     });
 });
+const express = require('express');
+const app = express();
+
+// Middleware para analisar requisições com dados JSON
+app.use(express.json());
+
+// Variável para contar o número de tentativas de senha incorreta
+let tentativasSenha = 0;
+
+// Endpoint para realizar saque e verificar a senha
+app.post('/api/saque', (req, res) => {
+    // Extrai as informações da requisição
+    const { saque, senha, conta } = req.body;
+
+    // Verifica se o número de tentativas de senha incorreta é menor que 3
+    if (tentativasSenha < 3) {
+        // Verifica se a senha fornecida é correta
+        if (conta.senha === senha) {
+            // Verifica se o saque é possível com o saldo disponível
+            if (saque <= conta.valor) {
+                // Realiza o saque e atualiza o saldo da conta
+                conta.valor -= saque;
+                res.status(200).json({
+                    mensagem: 'Saque realizado com sucesso',
+                    novoSaldo: conta.valor
+                });
+            } else {
+                res.status(400).json({
+                    mensagem: 'Saldo insuficiente'
+                });
+            }
+        } else {
+            // Senha incorreta, incrementa o contador de tentativas de senha
+            tentativasSenha++;
+            if (tentativasSenha >= 3) {
+                res.status(403).json({
+                    mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
+                });
+            } else {
+                res.status(401).json({
+                    mensagem: 'Senha incorreta'
+                });
+            }
+        }
+    } else {
+        // Número de tentativas de senha incorreta excedido
+        res.status(403).json({
+            mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
+        });
+    }
+});
+
+// Porta do servidor
+const port = 3000;
+
+// Inicia o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+
     
 </script>
 

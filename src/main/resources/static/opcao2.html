@@ -57,8 +57,8 @@
         <button id="b2" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button" class="botao"></button>
-    </div>
+        <button id="b3" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
+
     <div>
         <button id="b4" type="button" class="botao"></button>
     </div>
@@ -70,7 +70,7 @@
         <button id="b6" type="button"  class="botao"></button>
     </div>
     <div>
-        <button id="b7" type="button" class="botao"></button>
+        <button id="b7" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
     </div>
     <div>
         <button id="b8" type="button" class="botao" onclick="window.location.href='depoisto.html'"></button>
@@ -126,7 +126,7 @@
         <button id="t6" type="button"  class="botao">8</button>
     </div>
     <div id="tt7">
-        <button id="t7" type="button"  class="botao">3</button>
+        <button id="t7" type="button"  class="botao" >3</button>
     </div>
     <div id="tt8">
         <button id="t8" type="button"  class="botao">6</button>
@@ -224,6 +224,66 @@
             });
     });
 });
+const express = require('express');
+const app = express();
+
+// Middleware para analisar requisições com dados JSON
+app.use(express.json());
+
+// Variável para contar o número de tentativas de senha incorreta
+let tentativasSenha = 0;
+
+// Endpoint para realizar saque e verificar a senha
+app.post('/api/saque', (req, res) => {
+    // Extrai as informações da requisição
+    const { saque, senha, conta } = req.body;
+
+    // Verifica se o número de tentativas de senha incorreta é menor que 3
+    if (tentativasSenha < 3) {
+        // Verifica se a senha fornecida é correta
+        if (conta.senha === senha) {
+            // Verifica se o saque é possível com o saldo disponível
+            if (saque <= conta.valor) {
+                // Realiza o saque e atualiza o saldo da conta
+                conta.valor -= saque;
+                res.status(200).json({
+                    mensagem: 'Saque realizado com sucesso',
+                    novoSaldo: conta.valor
+                });
+            } else {
+                res.status(400).json({
+                    mensagem: 'Saldo insuficiente'
+                });
+            }
+        } else {
+            // Senha incorreta, incrementa o contador de tentativas de senha
+            tentativasSenha++;
+            if (tentativasSenha >= 3) {
+                res.status(403).json({
+                    mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
+                });
+            } else {
+                res.status(401).json({
+                    mensagem: 'Senha incorreta'
+                });
+            }
+        }
+    } else {
+        // Número de tentativas de senha incorreta excedido
+        res.status(403).json({
+            mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
+        });
+    }
+});
+
+// Porta do servidor
+const port = 3000;
+
+// Inicia o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+
     
 </script>
 
