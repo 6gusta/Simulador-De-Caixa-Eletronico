@@ -259,7 +259,8 @@ cursor: pointer;
 .duvidas{
   border-bottom: 1px solid black;
   width: 400px;
-  height: 50px;
+  height: 20px;
+  
  
 }
 .duvidas:hover{
@@ -281,7 +282,12 @@ cursor: pointer;
 }
 .duvida p {
   margin-top: 40px;
+  
 }
+.duvidas p {
+    margin-top: 40px;
+    color: black;
+  }
 
 
 #entrar{

@@ -44,38 +44,40 @@ public class VerificarContaController {
 
 
 @RestController
+
 public class ContaController {
 
     // Variável para contar o número de tentativas de senha incorreta
-    private int tentativasSenha = 0;
+//private int tentativasSenha = 0;
 
     // Método para realizar saque e verificar a senha
-    @PostMapping("/saque")
-    public ResponseEntity<String> sacar(@RequestParam int saque, @RequestParam String senha) {
-        // Verifique o número de tentativas de senha
-        if (tentativasSenha < 3) {
-            // Verifique se a senha fornecida é correta
-            if (conta.getSenha().equals(senha)) {
-                // Verifique se o saque é possível com o saldo disponível
-                if (saque <= conta.getValor()) {
+    //@PostMapping("/saque")
+    //public ResponseEntity<String> sacar(@RequestParam int saque, @RequestParam String senha, @RequestBody Conta conta) {
+        // Verifica se o número de tentativas de senha incorreta é menor que 3
+       // if (tentativasSenha < 3) {
+            // Verifica se a senha fornecida é correta
+           // if (conta.getSenha().equals(senha)) {
+                // Verifica se o saque é possível com o saldo disponível
+               // if (saque <= conta.getValor()) {
                     // Realiza o saque e atualiza o saldo da conta
-                    conta.setValor(conta.getValor() - saque);
-                    return ResponseEntity.ok("Saque realizado com sucesso. Novo saldo: " + conta.getValor());
-                } else {
-                    return ResponseEntity.badRequest().body("Saldo insuficiente.");
-                }
-            } else {
+                   // conta.setValor(conta.getValor() - saque);
+                    //return ResponseEntity.ok("Saque realizado com sucesso. Novo saldo: " + conta.getValor());
+               // } else {
+                    //return ResponseEntity.badRequest().body("Saldo insuficiente.");
+//}
+           // } else {
                 // Senha incorreta, incrementa o contador de tentativas de senha
-                tentativasSenha++;
-                if (tentativasSenha >= 3) {
-                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Muitas tentativas inválidas. Seu cartão foi bloqueado.");
-                }
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Senha incorreta.");
-            }
-        } else {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Muitas tentativas inválidas. Seu cartão foi bloqueado.");
-        }
-    }
+              //  tentativasSenha++;
+               // if (tentativasSenha >= 3) {
+               //    return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Muitas tentativas inválidas. Seu cartão foi bloqueado.");
+               // }
+               // return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Senha incorreta.");
+           // }
+       // } else {
+            // Número de tentativas de senha incorreta excedido
+           // return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Muitas tentativas inválidas. Seu cartão foi bloqueado.");
+       // }
+   // }
 }
     
 

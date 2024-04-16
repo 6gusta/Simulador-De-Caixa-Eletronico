@@ -115,10 +115,11 @@ body {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 17px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 22px;
   }
   #b{
     margin-top: 40px;
@@ -148,4 +149,5 @@ body {
     border-radius: 5px;
     text-align: left
   }
+  
     
