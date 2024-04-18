@@ -1,0 +1,585 @@
+#caixa{
+    width: 100%;
+    height: 1100px;
+    background-color:blue;
+   
+    margin-top: 20px;
+ 
+    margin-top: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
+#cima{
+    background-color: blue;
+    
+ 
+    height: 80px;
+
+   
+    margin-top: 20px;
+}
+#MINICAIXA{
+    background-color: #007bff;
+    width: 500px;
+    height: 70px;
+    margin-left: 700px;
+    text-align: center;
+    font-size: 90px;
+    margin-top: -30px;
+    color: white;
+    
+}
+
+
+#tela input {
+    /* Adicione propriedades CSS para mover o input para a esquerda */
+    margin-left: 220px; /* Altere o valor conforme necessário */
+    margin-top:  20px;
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
+}
+
+
+#teclado{
+    background-color: white;
+    width: 700px;
+    height: 200px;
+    margin-left: 550px;
+    margin-top: -125px;
+    border: 50px solid gray;
+
+}
+#cor{
+    width: 100px;
+    height: 10px;
+    background-color: green;
+    margin-left: 100px;
+}
+#cor2{
+    width: 100px;
+    height: 10px;
+    background-color: yellow;
+    margin-left: 100px;
+}
+#cor3{
+    width: 100px;
+    height: 10px;
+    background-color: red;
+    margin-left: 100px;
+
+}
+#b1{
+    width: 80px;
+    height: 80px;
+    margin-top: 170px;
+    margin-left: 330px;
+   
+}
+
+#b2 {
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 330px;
+    cursor: pointer; /* Adicionando cursor pointer */
+   /* Definindo uma cor de fundo para teste */
+}
+
+#b3 {
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 30px;
+ 
+    cursor: pointer; /* Adicionando cursor pointer */
+}
+
+#b4 {
+    width: 80px;
+    height: 80px;
+    margin-left: 330px;
+    margin-top: 30px;
+    cursor: pointer; /* Adicionando cursor pointer */
+}
+
+#b5 {
+    width: 80px;
+    height: 80px;
+    margin-left: 570px;
+    cursor: pointer; /* Adicionando cursor pointer */
+}
+
+#bb5{
+    width: 30px;
+    height: 30px;
+    margin-left: 920px;
+    margin-top: -410px; /* Evite margens negativas se possível */
+    
+}
+
+#b6{
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 80px;
+    
+}
+
+#b7{
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 30px;
+    margin-left: 330px;
+    
+}
+
+.botao {
+
+
+    cursor: pointer;
+  
+   
+    
+}
+
+#b8{
+    width: 80px;
+    height: 80px;
+    margin-left: 1490px;
+    margin-top: 30px;
+    cursor:pointer ;
+}
+
+#tela{
+    width: 1000px;
+    height: 500px;
+    background-color:white;
+    margin-top: -1100px;
+    margin-left: 300px;
+    border: 150px solid gray;
+
+    background-image: url(Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
+ 
+}
+
+  #me{
+    color: white;
+    font-size: 35px;
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+  #mes{
+    color: white;
+    font-size: 25px;
+    margin-left: 30px;
+  }
+#t1{
+    width: 135px;
+    height: 55px;
+    margin-left: 0px;
+}
+
+H1{
+   color: white;
+   text-align: center;
+}
+
+
+#t12{
+    margin-left: 60px;
+    margin-top: -40px;
+      
+    width: 25px;
+    height: 30px
+}
+
+#bt2{
+    margin-top: -40px;
+
+    
+}
+.button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 1700px;
+    margin-top: -50px;
+    width: 190px;
+}
+header{
+    background-color: #0056b3;
+    width: 100%;
+    height: 100px;
+    background-image: url(BUwQtAL\ -\ Imgur\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: 84% 50%;
+   
+}
+button:hover{
+    background-color: white;
+}
+
+
+
+
+.menu {
+display: none;
+position: absolute;
+margin-top: 23px;
+margin-left: 5px;
+background-color: #fff;
+padding: 10px;
+border: 1px solid #ccc;
+width: 390px;
+height: 520px;
+}
+
+#burger{
+  font-family: 'Material Symbols Outlined', sans-serif;
+  margin-left: 70px;
+  color:rgb(233, 183, 139);
+font-size: 60px;
+margin-top: -20px;
+cursor: pointer;
+  
+  
+
+
+}
+.duvidas{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 50px;
+ 
+}
+.duvidas:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  margin-top: -50px;
+  font-size: 25px;
+  
+
+}
+.duvida p {
+  margin-top: 40px;
+}
+
+
+#entrar{
+    margin-left: 1000px;
+    margin-top: -52px;
+    height: 75px;
+    margin-top: -20px;
+    width: 300px;
+    color: green;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+#mensagem {
+    color:white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+#trar{
+    margin-top: 70px;
+    position: relative;
+}
+#apagar{
+    margin-left: 400px;   
+    width: 300px;
+    height: 70px;
+    margin-top: 0px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#cancelar{
+    margin-left: 400px;   
+    width: 300px;
+    height: 70px;
+    margin-top: 0px;
+    font-size: 25px;    
+    cursor: pointer;
+
+
+}
+#pg{
+    margin-top: -140px;
+}
+
+
+
+#t2{
+    width: 135px;
+    height: 55px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+#t3{
+    width: 135px;
+    height: 55px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+#t4{
+    width: 135px;
+    height: 55px;
+    margin-left: 130px;
+    cursor: pointer;
+    
+}
+#tt4{
+    margin-top: -165px;
+    cursor: pointer;
+}
+#t5{
+    width: 135px;
+    height: 55px;
+    margin-left: 130px;
+    cursor: pointer;
+}
+#t6{
+    width: 135px;
+    height: 55px;
+    margin-left: 130px;
+    cursor: pointer;
+}
+
+#t7{
+    margin-left: 265px;
+  
+    width: 135px;
+    height: 55px;
+    cursor: pointer;
+
+}
+#tt8{
+    margin-top: -15px;
+    cursor: pointer;
+}
+#t8{
+    margin-left: 265px;
+  
+    width: 135px;
+    height: 55px;
+    cursor: pointer;
+ 
+}
+H1{
+   color: white;
+   text-align: center;
+}
+
+#tt7{
+  margin-top:-165px ;
+  cursor: pointer;
+
+ 
+    width: 135px;
+    height: 70px;
+  
+}
+#t9{
+ 
+    margin-left: 265px;
+ 
+    width: 135px;
+    height: 55px;
+    margin-top: 0px;
+    cursor: pointer;
+
+}
+#tt10{
+    margin-top: 0px;
+    cursor: pointer;
+    
+
+}
+#t10{
+ 
+   
+    width: 132px;
+    height: 50px;
+    cursor: pointer;
+
+    
+
+}
+#t11{
+    margin-left: 130px;
+    margin-top: 50px;
+    width: 135px;
+    height: 50px;
+    cursor: pointer;
+}
+#tt11{
+    margin-top: -102px;
+}
+#t12{
+    margin-left: 265px;
+    margin-top: -px;
+    width: 135px;
+    height: 50px;
+    cursor: pointer;
+}
+#tt12{
+    margin-top:-35px;
+
+
+}
+
+
+
+
+h4{
+margin-left: 420px;
+color: black;
+
+}
+h5{
+color:rgb(233, 183, 139);
+font-size: 35px;
+
+
+margin-left: 1620px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin-top: 10px;
+}
+#logo{
+margin-left: 1500px;
+margin-top: -90px;
+}
+.menu {
+display: none;
+position: absolute;
+margin-top: 23px;
+margin-left: 5px;
+background-color: #fff;
+padding: 10px;
+border: 1px solid #ccc;
+width: 390px;
+height: 520px;
+}
+#divb{
+margin-top: -60px;
+width: 200px;
+color: white;
+}
+/* Estilo para as divs #y0, #y1, #y2, #y3 */
+/* Estilo para a div #sacar */
+#sacar {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: -10px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Estilo para a div #depositar */
+#depositar {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: -10px;
+        margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+
+/* Estilo para a div #saldo */
+#saldo {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 700px;
+    margin-top: -170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Estilo para o container que contém o texto e o input */
+.input-container {
+  
+    align-items: center; /* Alinhar verticalmente os itens */
+
+    margin-top: 100px; /* Adiciona margem superior ao container */
+    gap: 0px; /* Remove o espaço entre o texto e o input */
+ 
+}
+
+
+
+
+
+
+/* Estilo para a div #transferencia */
+#transferencia {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 700px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */
+.sacar,
+.depositar,
+.saldo,
+.transferencia {
+    font-size: 25px;
+    margin: 0; /* Remove qualquer margem padrão */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

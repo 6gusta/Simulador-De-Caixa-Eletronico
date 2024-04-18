@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>controle</title>
    
- <link rel="stylesheet" href="sacar.css">
+ <link rel="stylesheet" href="vintereais.css">
 </head>
 <body>
     <header>
@@ -57,7 +57,7 @@
         <button id="b2" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button" class="botao" ></button>
+        <button id="b3" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
 
     <div>
         <button id="b4" type="button" class="botao"></button>
@@ -81,30 +81,26 @@
     </div>
  </div>
 
- <div id="tela">
-    <p id="me">Escolha o valor que deseja sacar:</p>
-    <p id="me">Em seguida, pressione o botão correspondente ao valor selecionado para continuar.</p><br>
-    
+ 
 
-    <div id="sacar">
-        <p class="sacar">R$ 20,00 </p>
+ <div id="tela">
+    <p id="me">
+        insira sua senha para prosseguir com o saque
+    </p>
+    <div class="input-container" id="sen">
+        <input id="campo-senha" type="password" placeholder="Digite sua senha" maxlength="4">
     </div>
-    <div id="depositar">
-        <p class="depositar"> R$ 50,00</p>
-    </div>
-    <div id="saldo">
-        <p class="saldo"> R$ 100,00</p>
-    </div>
-    <div id="transferencia">
-        <p class="transferencia"> OUTRO VALOR </p>
-    </div>
-    <div id="trar">
-        <button id="entrar" type="button" class="botao" >ENTRAR
-            <div id="cor"></div>
-        </button>
-    </div>
-    <p id="mensagem"></p>
 </div>
+
+<div id="trar">
+    <button id="entrar" type="button" class="botao" >ENTRAR
+        <div id="cor"></div>
+    </button>
+</div>
+<p id="mensagem"></p>
+    
+</div>
+
 
 
  <div id="teclado">
@@ -224,50 +220,13 @@
                 console.error("Erro ao verificar a conta:", error);
             });
     });
-    document.getElementById('b7').addEventListener('click', async function() {
-    // URL da nova página para redirecionar
-    const novaPaginaURL = 'vintereais.html';
-
-    // Primeiro, redirecione o usuário para a nova página
-    window.location.href = novaPaginaURL;
-
-    // Após redirecionar para a nova página, você pode executar a lógica de saque
-
-    // Use valores de conta, senha e valor de saque necessários
-    const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 20; // Valor fixo de saque para o botão b7
-    const senha = 'minhaSenha'; // Substitua pela senha real
-
-    // Use função assíncrona para esperar o redirecionamento
-    try {
-        // Envia uma solicitação POST para a API para realizar o saque
-        const response = await fetch('/api/saque', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                numeroConta: numeroConta,
-                valor: valorSaque,
-                senha: senha,
-            }),
-        });
-
-        // Processa a resposta
-        const result = await response.text();
-        alert(result); // Mostra a resposta da API para o usuário
-
-    } catch (error) {
-        console.error('Erro:', error);
-    }
 });
-
-
-document.getElementById('b8').addEventListener('click', function() {
-    // Preencha com os valores de conta, senha e valor de saque necessários
-    const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 50; // Valor fixo de saque para o botão b8
-    const senha = 'minhaSenha'; // Substitua pela senha real
+// Configurar ouvintes de clique nos botões
+document.getElementById('b7').addEventListener('click', function() {
+    // Capturar valores dos campos de entrada no DOM
+    const numeroConta = document.getElementById('numeroConta').value;
+    const valorSaque = 20; // Valor fixo de saque para o botão b7
+    const senha = document.getElementById('senha').value;
 
     // Envia uma solicitação POST para a API para realizar o saque
     fetch('/api/saque', {
@@ -290,9 +249,46 @@ document.getElementById('b8').addEventListener('click', function() {
     });
 });
 
+document.getElementById('b8').addEventListener('click', function() {
+    // Capturar valores dos campos de entrada no DOM
+    const numeroConta = document.getElementById('numeroConta').value;
+    const valorSaque = 50; // Valor fixo de saque para o botão b8
+    const senha = document.getElementById('senha').value;
 
-});
+    // Envia uma solicitação POST para a API para realizar o saque
+    fetch('/api/saque', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            numeroConta: numeroConta,
+            valor: valorSaque,
+            senha: senha,
+        }),
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert(result); // Mostra a resposta da API para o usuário
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
     
+});
+
+// Selecionar o botão "apagar" e o campo de senha
+const botaoApagar = document.getElementById('apagar');
+const campoSenha = document.getElementById('campo-senha');
+
+// Adicionar um evento de clique ao botão "apagar"
+botaoApagar.addEventListener('click', function() {
+    // Limpar o campo de senha
+    campoSenha.value = '';
+});
+
+
+
 </script>
 
 

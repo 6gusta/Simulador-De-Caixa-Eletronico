@@ -224,65 +224,61 @@
             });
     });
 });
-const express = require('express');
-const app = express();
+// Configurar ouvintes de clique nos botões
+document.getElementById('b7').addEventListener('click', function() {
+    // Preencha com os valores de conta, senha e valor de saque necessários
+    const numeroConta = '12345'; // Substitua pelo número de conta real
+    const valorSaque = 20; // Valor fixo de saque para o botão b7
+    const senha = 'minhaSenha'; // Substitua pela senha real
 
-// Middleware para analisar requisições com dados JSON
-app.use(express.json());
-
-// Variável para contar o número de tentativas de senha incorreta
-let tentativasSenha = 0;
-
-// Endpoint para realizar saque e verificar a senha
-app.post('/api/saque', (req, res) => {
-    // Extrai as informações da requisição
-    const { saque, senha, conta } = req.body;
-
-    // Verifica se o número de tentativas de senha incorreta é menor que 3
-    if (tentativasSenha < 3) {
-        // Verifica se a senha fornecida é correta
-        if (conta.senha === senha) {
-            // Verifica se o saque é possível com o saldo disponível
-            if (saque <= conta.valor) {
-                // Realiza o saque e atualiza o saldo da conta
-                conta.valor -= saque;
-                res.status(200).json({
-                    mensagem: 'Saque realizado com sucesso',
-                    novoSaldo: conta.valor
-                });
-            } else {
-                res.status(400).json({
-                    mensagem: 'Saldo insuficiente'
-                });
-            }
-        } else {
-            // Senha incorreta, incrementa o contador de tentativas de senha
-            tentativasSenha++;
-            if (tentativasSenha >= 3) {
-                res.status(403).json({
-                    mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
-                });
-            } else {
-                res.status(401).json({
-                    mensagem: 'Senha incorreta'
-                });
-            }
-        }
-    } else {
-        // Número de tentativas de senha incorreta excedido
-        res.status(403).json({
-            mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
-        });
-    }
+    // Envia uma solicitação POST para a API para realizar o saque
+    fetch('/api/saque', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            numeroConta: numeroConta,
+            valor: valorSaque,
+            senha: senha,
+        }),
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert(result); // Mostra a resposta da API para o usuário
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
 });
 
-// Porta do servidor
-const port = 3000;
+document.getElementById('b8').addEventListener('click', function() {
+    // Preencha com os valores de conta, senha e valor de saque necessários
+    const numeroConta = '12345'; // Substitua pelo número de conta real
+    const valorSaque = 50; // Valor fixo de saque para o botão b8
+    const senha = 'minhaSenha'; // Substitua pela senha real
 
-// Inicia o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+    // Envia uma solicitação POST para a API para realizar o saque
+    fetch('/api/saque', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            numeroConta: numeroConta,
+            valor: valorSaque,
+            senha: senha,
+        }),
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert(result); // Mostra a resposta da API para o usuário
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
 });
+
 
     
 </script>
