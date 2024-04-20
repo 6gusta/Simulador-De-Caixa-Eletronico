@@ -221,61 +221,59 @@
             });
     });
 });
-// Configurar ouvintes de clique nos botões
-document.getElementById('b7').addEventListener('click', function() {
-    // Capturar valores dos campos de entrada no DOM
-    const numeroConta = document.getElementById('numeroConta').value;
-    const valorSaque = 20; // Valor fixo de saque para o botão b7
-    const senha = document.getElementById('senha').value;
+// Selecionar elementos do DOM
+const entrarButton = document.getElementById('entrar');
 
-    // Envia uma solicitação POST para a API para realizar o saque
-    fetch('/api/saque', {
+const mensagemElement = document.getElementById('mensagem');
+
+// Adicionar um evento de clique ao botão "ENTRAR"
+entrarButton.addEventListener('click', function() {
+    // Obter a senha inserida
+    const senha = campoSenha.value;
+
+    // Verificar se o campo de senha está vazio
+    if (senha.trim() === '') {
+        mensagemElement.innerText = "Por favor, digite sua senha.";
+        return;
+    }
+
+    // Fazer uma solicitação POST para a API para verificar a senha
+    fetch('/api/entrar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            numeroConta: numeroConta,
-            valor: valorSaque,
             senha: senha,
         }),
     })
-    .then(response => response.text())
-    .then(result => {
-        alert(result); // Mostra a resposta da API para o usuário
+    .then(response => {
+        // Verificar se a resposta é um sucesso
+        if (response.ok) {
+            return response.json(); // Converter a resposta para JSON
+        } else {
+            throw new Error('Erro ao validar a senha.');
+        }
+    })
+    .then(data => {
+        // Verificar se a API retornou sucesso
+        if (data.sucesso) {
+            alert('Senha válida!');
+
+            // Redirecionar para uma nova página HTML
+            window.location.href = '/Sconcluido.html';
+        } else {
+            // Exibir mensagem de erro da API
+            mensagemElement.innerText = data.mensagem || 'Senha inválida.';
+        }
     })
     .catch(error => {
         console.error('Erro:', error);
+        // Exibir mensagem de erro ao usuário
+        alert('Erro: ' + error.message);
     });
 });
 
-document.getElementById('b8').addEventListener('click', function() {
-    // Capturar valores dos campos de entrada no DOM
-    const numeroConta = document.getElementById('numeroConta').value;
-    const valorSaque = 50; // Valor fixo de saque para o botão b8
-    const senha = document.getElementById('senha').value;
-
-    // Envia uma solicitação POST para a API para realizar o saque
-    fetch('/api/saque', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            numeroConta: numeroConta,
-            valor: valorSaque,
-            senha: senha,
-        }),
-    })
-    .then(response => response.text())
-    .then(result => {
-        alert(result); // Mostra a resposta da API para o usuário
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-    });
-    
-});
 
 // Selecionar o botão "apagar" e o campo de senha
 const botaoApagar = document.getElementById('apagar');
