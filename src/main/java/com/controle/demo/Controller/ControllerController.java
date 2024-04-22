@@ -44,53 +44,31 @@ public class VerificarContaController {
     }
 }
 
+@RestController
+public class SaqueController {
 
-@PostMapping("/api/saque")
-public ResponseEntity<String> realizarSaque(@RequestParam String numeroConta, @RequestParam String senha, @RequestParam int valor) {
-    // Verifica se os parâmetros são válidos
-    if (numeroConta == null || senha == null || valor <= 0) {
-        return new ResponseEntity<>("Parâmetros inválidos.", HttpStatus.BAD_REQUEST);
+    @PostMapping("/api/saque")
+    public ResponseEntity<String> realizarSaque(@RequestParam String senha, @RequestParam int valor) {
+        // Verifica se os parâmetros são válidos
+        if (senha == null || senha.isEmpty() || valor <= 0) {
+            return new ResponseEntity<>("Parâmetros inválidos.", HttpStatus.BAD_REQUEST);
+        }
+
+        // Verifica se a senha está correta
+        if (!"0376".equals(senha)) { // Substitua pela lógica real de verificação de senha
+            return new ResponseEntity<>("Senha incorreta.", HttpStatus.FORBIDDEN);
+        }
+
+        // Aqui você pode implementar a lógica para realizar o saque na conta do usuário
+        // Isso incluirá a verificação do saldo, a atualização do saldo após o saque, etc.
+
+        // Simulação de sucesso
+        double novoSaldo = 1000 - valor; // Substitua pelo novo saldo após o saque
+        String mensagemSucesso = String.format("Saque de R$ %d realizado com sucesso. Novo saldo: R$ %.2f", valor, novoSaldo);
+        return ResponseEntity.ok(mensagemSucesso);
     }
-
-    // Obtenha a conta do banco de dados ou de um serviço externo
-    Numerodaconta conta = obterConta(numeroConta);
-
-    // Verifica se a conta foi encontrada
-    if (conta == null) {
-        return new ResponseEntity<>("Conta não encontrada.", HttpStatus.BAD_REQUEST);
-    }
-
-    // Verifica se a senha está correta
-    if (!conta.getSenha().equals(senha)) {
-        return new ResponseEntity<>("Senha incorreta.", HttpStatus.FORBIDDEN);
-    }
-
-    // Verifica se há saldo suficiente
-    if (conta.getValor() < valor) {
-        return new ResponseEntity<>("Saldo insuficiente.", HttpStatus.PAYMENT_REQUIRED);
-    }
-
-    // Realiza o saque e atualiza o saldo da conta
-    conta.setValor(conta.getValor() - valor);
-
-    // Salva a conta atualizada no banco de dados ou serviço externo
-    atualizarConta(conta);
-
-    // Retorna uma resposta de sucesso com o novo saldo
-    String mensagemSucesso = String.format("Saque realizado com sucesso. Novo saldo: %.2f", conta.getValor());
-    return new ResponseEntity<>(mensagemSucesso, HttpStatus.OK);
 }
 
-// Método para obter a conta com base no número da conta
-private Numerodaconta obterConta(String numeroConta) {
-    // Implementar a lógica para obter a conta de um banco de dados ou serviço externo
-    return null;
-}
-
-// Método para atualizar a conta
-private void atualizarConta(Numerodaconta conta) {
-    // Implementar a lógica para atualizar a conta em um banco de dados ou serviço externo
-}
 
 
     

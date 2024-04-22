@@ -31,6 +31,7 @@ public class DemoApplication {
     a1.setSenha("0376");
     a1.setTipodeconta(" ITAU ");
     a1.setPouc(" corrente ");
+    
     Caixaeletronico caixas = new Caixaeletronico();
 
     caixas.Caixaeletronic(a1);

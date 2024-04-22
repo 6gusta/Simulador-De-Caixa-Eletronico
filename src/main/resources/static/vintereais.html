@@ -89,6 +89,9 @@
     </p>
     <div class="input-container" id="sen">
         <input id="campo-senha" type="password" placeholder="Digite sua senha" maxlength="4">
+          <span id="togglePassword" onclick="togglePasswordVisibility()">
+    <i id="eyeIcon" class="fas fa-eye-slash"></i>
+</span>
     </div>
 </div>
 
@@ -221,58 +224,46 @@
             });
     });
 });
-// Selecionar elementos do DOM
-const entrarButton = document.getElementById('entrar');
+document.addEventListener('DOMContentLoaded', function() {
+    const entrarButton = document.getElementById('entrar');
+    const mensagemElement = document.getElementById('mensagem');
+    const campoSenha = document.getElementById('campo-senha'); 
 
-const mensagemElement = document.getElementById('mensagem');
+    entrarButton.addEventListener('click', function() {
+        const senha = campoSenha.value;
+        const valorSaque = 100; // Aqui você pode ajustar para o valor que desejar
 
-// Adicionar um evento de clique ao botão "ENTRAR"
-entrarButton.addEventListener('click', function() {
-    // Obter a senha inserida
-    const senha = campoSenha.value;
-
-    // Verificar se o campo de senha está vazio
-    if (senha.trim() === '') {
-        mensagemElement.innerText = "Por favor, digite sua senha.";
-        return;
-    }
-
-    // Fazer uma solicitação POST para a API para verificar a senha
-    fetch('/api/entrar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            senha: senha,
-        }),
-    })
-    .then(response => {
-        // Verificar se a resposta é um sucesso
-        if (response.ok) {
-            return response.json(); // Converter a resposta para JSON
-        } else {
-            throw new Error('Erro ao validar a senha.');
+        if (senha.trim() === '') {
+            mensagemElement.innerText = "Por favor, digite sua senha.";
+            return;
         }
-    })
-    .then(data => {
-        // Verificar se a API retornou sucesso
-        if (data.sucesso) {
-            alert('Senha válida!');
 
-            // Redirecionar para uma nova página HTML
+        fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded', // Ajuste o tipo de conteúdo conforme necessário
+            },
+            body: `senha=${senha}&valor=${valorSaque}`, // Envie a senha e o valor do saque como parâmetros
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
+            }
+        })
+        .then(data => {
+            // Exibir mensagem de sucesso ao usuário
+            alert(data);
             window.location.href = '/Sconcluido.html';
-        } else {
-            // Exibir mensagem de erro da API
-            mensagemElement.innerText = data.mensagem || 'Senha inválida.';
-        }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        // Exibir mensagem de erro ao usuário
-        alert('Erro: ' + error.message);
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao processar a solicitação. Por favor, tente novamente.');
+        });
     });
 });
+
 
 
 // Selecionar o botão "apagar" e o campo de senha

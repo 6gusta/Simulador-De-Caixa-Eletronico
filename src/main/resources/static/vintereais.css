@@ -164,7 +164,7 @@
     margin-left: 300px;
     border: 150px solid gray;
 
-    background-image: url(Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
+    background-image: url(imagens/Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
  
 }
 
@@ -541,6 +541,22 @@ color: white;
     gap: 0px; /* Remove o espaço entre o texto e o input */
  
 }
+#eyeIcon {
+    cursor: pointer; /* Mostra cursor de ponteiro ao passar sobre o ícone */
+    margin-left: 5px; /* Adiciona margem à esquerda para espaçamento */
+}
+
+/* Estilo para o botão (span) */
+#togglePassword {
+    display: inline-flex; /* Garante que o ícone fique ao lado do campo de entrada */
+    align-items: center;
+    padding: 2px;
+    margin-left: -50px;
+    font-size: 25px; /*
+     Adiciona um pouco de padding para espaçamento */
+     color: gray;
+}
+
 
 
 
