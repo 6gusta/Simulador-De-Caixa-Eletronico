@@ -71,7 +71,7 @@
         <button id="b6" type="button"  class="botao"></button>
     </div>
     <div>
-        <button id="b7" type="button" class="botao"></button>
+        <button id="b7" type="button" class="botao" onclick="window.location.href='sacar.html'"></button>
     </div>
     <div>
         <button id="b8" type="button" class="botao" onclick="window.location.href='depoisto.html'"></button>
@@ -224,7 +224,34 @@
                 console.error("Erro ao verificar a conta:", error);
             });
     });
+    document.getElementById('b7').addEventListener('click', function() {
+    // Preencha com os valores de conta, senha e valor de saque necessários
+    const numeroConta = '12345'; // Substitua pelo número de conta real
+    const valorSaque = 20; // Valor fixo de saque para o botão b7
+    const senha = 'minhaSenha'; // Substitua pela senha real
+
+    // Envia uma solicitação POST para a API para realizar o saque
+    fetch('/api/saque', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            numeroConta: numeroConta,
+            valor: valorSaque,
+            senha: senha,
+        }),
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert(result); // Mostra a resposta da API para o usuário
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
 });
+});
+
     
 </script>
 

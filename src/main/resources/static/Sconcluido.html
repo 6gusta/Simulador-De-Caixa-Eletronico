@@ -3,9 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>controle</title>
+   
+ <link rel="stylesheet" href="vintereais.css">
 </head>
 <body>
-    ss
+    <header>
+        <h4>.</h4>
+        <h5>  SimpleTech </h5>
+      
+        <div id="divb">
+          <span class="material-symbols-outlined" id="burger">☰</span>
+          <div class="menu" id="menu">
+
+            <div class="duvida" onclick="window.location.href = 'inicio.html';">
+              <p id="pagina">Pagina inicial</p>
+          </div>
+          
+           <div class="duvidas" onclick="window.location.href = 'tutorial.html'">
+             <p> como usar o SIMPLE ATM </p>
+            </div>
+            <div class="duvidas" onclick="window.location.href='index.html'">
+              <P> Ir para o caixa eletrônico</P>
+            </div>
+         <div class="duvidas" onclick="window.location.href='sobrenos.html'">
+          <p> Sobre nos </p>
+         </div>
+     
+          <div class="duvidas" onclick="window.location.href='faq.html'">
+            <p >FAQ</p>
+          </div>
+          </div>
+      
+        </div>
+        <div id="logo">
+        
+        </div>
+      
+      </header>
+
+ <div id="cima">
+    <div id="MINICAIXA">
+        <h6>
+            SIMPLE ATM
+        </h6>
+    </div>
+    
+ </div>
+
+ <div id="caixa">
+    <button id="b1" type="button" class="botao"></button>
+    <div>
+        <button id="b2" type="button" class="botao"></button>
+    </div>
+    <div>
+        <button id="b3" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
+
+    <div>
+        <button id="b4" type="button" class="botao"></button>
+    </div>
+    
+    <div id="bb5">
+        <button id="b5" type="button"  class="botao"></button>
+    </div>
+    <div>
+        <button id="b6" type="button"  class="botao"></button>
+    </div>
+    <div>
+        <button id="b7" type="button" class="botao"  ></button>
+    </div>
+    <div>
+        <button id="b8" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
+    </div>
+    <div id="re"></div>
+
+
+    </div>
+ </div>
+
+ 
+
+ <div id="tela">
+    <p id="me">
+        valor sacado com sucesso 
+    </p><br>
+    <p id="mes">
+        para sair da sua conta ou realizar outra operação 
+    </p> <br>
+    <p id="mes"> 
+        aperte o botão CANCELAR 
+    </p><br>
+  
+    </div>
+</div>
+
+<div id="trar">
+    <button id="entrar" type="button" class="botao" >ENTRAR
+        <div id="cor"></div>
+    </button>
+</div>
+<p id="mensagem"></p>
+    
+</div>
+
+
+
+ <div id="teclado">
+    <div>
+        <button id="t1" type="button" class="botao">1</button>
+    </div>
+    <div>
+        <button id="t2" type="button" class="botao">4</button>
+    </div>
+    <div>
+        <button id="t3" type="button"  class="botao">7</button>
+    </div>
+    <div id="tt4">
+        <button  id="t4" type="button"  class="botao">2</button>
+    </div>
+    <div>
+        <button id="t5" type="button"  class="botao">5</button>
+    </div>
+    <div>
+        <button id="t6" type="button"  class="botao">8</button>
+    </div>
+    <div id="tt7">
+        <button id="t7" type="button"  class="botao" >3</button>
+    </div>
+    <div id="tt8">
+        <button id="t8" type="button"  class="botao">6</button>
+    </div>
+    <div>
+        <button id="t9" type="button"  class="botao">9</button>
+    </div>
+    <div id="tt10">
+        <button id="t10" type="button"  class="botao"></button>
+    </div>
+    <div id="tt11">
+        <button id="t11" type="button"  class="botao">0</button>
+    </div>
+    <div id="tt12">
+        <button id="t12" type="button"  class="botao">+</button>
+    </div>
+    <div id="pg">
+        <button id="apagar" type="button"  class="botao">APAGAR
+            <div id="cor2"></div>
+        </button>
+    </div>
+    <div>
+        <button id="cancelar" type="button" class="botao" onclick="window.location.href='index.html'">CANCELAR
+            <div id="cor3"></div>
+        </button>
+    </div>
+ </div>
+    
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burgerIcon = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        burgerIcon.addEventListener('click', function(event) {
+            event.stopPropagation();
+            toggleMenu();
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menu.contains(event.target) && menu.style.display === 'block') {
+                menu.style.display = 'none';
+            }
+        });
+
+        function toggleMenu() {
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function changeColor(event, color) {
+            var buttons = document.getElementsByClassName('botao');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = '';
+            }
+           
+        }
+
+        var buttons = document.getElementsByClassName('botao');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function(event) {
+           
+            });
+        }
+
+        const entrarButton = document.getElementById('entrar');
+    const numeroContaInput = document.getElementById('numeroConta');
+    const mensagemElement = document.getElementById('mensagem');
+    
+
+    entrarButton.addEventListener('click', function() {
+        let numeroContaDigitado = numeroContaInput.value;
+
+        fetch(`/api/verificar-conta?numeroConta=${numeroContaDigitado}`)
+            .then(response => response.text())
+            .then(data => {
+                if (data === "Conta válida") {
+                    console.log("Conta válida");
+                    // Redirecionar para outra página
+                    window.location.href = "opcoes.html";
+                } else {
+                    console.log('%cEsta é uma mensagem de console estilizada', 'color: white; font-size: 20px;');
+
+                    alert( " se fudeu ");
+
+                    // Exibir mensagem de erro para o usuário
+                    mensagemElement.innerText = "Número da conta inválido";
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao verificar a conta:", error);
+            });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const entrarButton = document.getElementById('entrar');
+    const mensagemElement = document.getElementById('mensagem');
+    const campoSenha = document.getElementById('campo-senha'); 
+
+    entrarButton.addEventListener('click', function() {
+        const senha = campoSenha.value;
+        const valorSaque = 100; // Aqui você pode ajustar para o valor que desejar
+
+        if (senha.trim() === '') {
+            mensagemElement.innerText = "Por favor, digite sua senha.";
+            return;
+        }
+
+        fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded', // Ajuste o tipo de conteúdo conforme necessário
+            },
+            body: `senha=${senha}&valor=${valorSaque}`, // Envie a senha e o valor do saque como parâmetros
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
+            }
+        })
+        .then(data => {
+            // Exibir mensagem de sucesso ao usuário
+            alert(data);
+            window.location.href = '/Sconcluido.html';
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao processar a solicitação. Por favor, tente novamente.');
+        });
+    });
+});
+
+
+
+// Selecionar o botão "apagar" e o campo de senha
+const botaoApagar = document.getElementById('apagar');
+const campoSenha = document.getElementById('campo-senha');
+
+// Adicionar um evento de clique ao botão "apagar"
+botaoApagar.addEventListener('click', function() {
+    // Limpar o campo de senha
+    campoSenha.value = '';
+});
+
+
+
+</script>
+
+
 </html>

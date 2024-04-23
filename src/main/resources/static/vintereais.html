@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>controle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    
  <link rel="stylesheet" href="vintereais.css">
 </head>
@@ -89,7 +90,7 @@
     </p>
     <div class="input-container" id="sen">
         <input id="campo-senha" type="password" placeholder="Digite sua senha" maxlength="4">
-          <span id="togglePassword" onclick="togglePasswordVisibility()">
+        <span id="togglePassword" onclick="togglePasswordVisibility()">
     <i id="eyeIcon" class="fas fa-eye-slash"></i>
 </span>
     </div>
@@ -275,6 +276,26 @@ botaoApagar.addEventListener('click', function() {
     // Limpar o campo de senha
     campoSenha.value = '';
 });
+function togglePasswordVisibility() {
+            // Seleciona o campo de entrada de senha e o ícone de olho
+            const campoSenha = document.getElementById('campo-senha');
+            const eyeIcon = document.getElementById('eyeIcon');
+
+            // Verifica o tipo atual do campo de entrada de senha
+            if (campoSenha.type === 'password') {
+                // Se for 'password', mude para 'text' para mostrar a senha
+                campoSenha.type = 'text';
+                // Altere o ícone para 'fa-eye' para indicar que a senha está visível
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                // Se for 'text', mude para 'password' para ocultar a senha
+                campoSenha.type = 'password';
+                // Altere o ícone para 'fa-eye-slash' para indicar que a senha está oculta
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+        }
 
 
 

@@ -173,11 +173,15 @@
     font-size: 35px;
     margin-left: 30px;
     margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 400px;
   }
   #mes{
     color: white;
     font-size: 25px;
     margin-left: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 400px;
   }
 #t1{
     width: 135px;
