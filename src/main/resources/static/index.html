@@ -97,6 +97,8 @@
    <span id="togglePassword" onclick="togglePasswordVisibility()">
     <i id="eyeIcon" class="fas fa-eye-slash"></i>
 </span>
+<div id="mensagem"></div>
+
   <div id="trar">
     <button id="entrar"  type="button"  class="botao">ENTRAR
         <div id="cor"></div>
@@ -216,7 +218,7 @@ entrarButton.addEventListener('click', function() {
                 // Exibir mensagem de erro para o usuário
             
                 mensagemElement.innerText = "Número da conta inválido";
-                alert(" numero de conta invalido ")
+             
             }
         })
         .catch(error => {

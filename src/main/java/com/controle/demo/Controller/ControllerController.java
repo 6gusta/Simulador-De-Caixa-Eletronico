@@ -69,6 +69,22 @@ public class SaqueController {
     }
 }
 
+///@RestController
+//public class saldoController{
+    //@GetMapping("/api/saldo")
+    //public ResponseEntity<Double> consultarSaldo() {
+      //  if (conta != null) {
+          //  double saldo = conta.getSaldo();
+           // return ResponseEntity.ok(saldo);
+       // } else {
+            // Se a conta não estiver disponível, retorna um erro 404 (Not Found)
+          //  return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+      //  }
+   // }
+//}///
+
+
+
 
 
     

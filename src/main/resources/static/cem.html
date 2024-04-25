@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     entrarButton.addEventListener('click', function() {
         const senha = campoSenha.value;
-        const valorSaque = 20; // Valor do saque ajustado para 20 reais
+        const valorSaque = 100; // Valor do saque ajustado para 20 reais
 
         if (senha.trim() === '') {
             mensagemElement.innerText = "Por favor, digite sua senha.";
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Erro:', error);
-            mensagemElement.innerText = 'Erro ao realizar o saque. Por favor, tente novamente';
+            mensagemElement.innerText = 'Erro ao processar a solicitação. Por favor, tente novamente.';
         });
     });
 });

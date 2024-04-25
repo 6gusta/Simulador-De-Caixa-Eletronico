@@ -60,7 +60,7 @@
         <button id="b3" type="button" class="botao" ></button>
 
     <div>
-        <button id="b4" type="button" class="botao"></button>
+        <button id="b4" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
     </div>
     
     <div id="bb5">
@@ -73,7 +73,7 @@
         <button id="b7" type="button" class="botao"  ></button>
     </div>
     <div>
-        <button id="b8" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
+        <button id="b8" type="button" class="botao" ></button>
     </div>
     <div id="re"></div>
 
@@ -263,31 +263,79 @@
 });
 
 
-document.getElementById('b8').addEventListener('click', function() {
-    // Preencha com os valores de conta, senha e valor de saque necessários
+document.getElementById('b3').addEventListener('click', async function() {
+    // URL da nova página para redirecionar
+    const novaPaginaURL = 'cem.html';
+
+    // Primeiro, redirecione o usuário para a nova página
+    window.location.href = novaPaginaURL;
+
+    // Após redirecionar para a nova página, você pode executar a lógica de saque
+
+    // Use valores de conta, senha e valor de saque necessários
     const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 50; // Valor fixo de saque para o botão b8
+    const valorSaque = 20; // Valor fixo de saque para o botão b7
     const senha = 'minhaSenha'; // Substitua pela senha real
 
-    // Envia uma solicitação POST para a API para realizar o saque
-    fetch('/api/saque', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            numeroConta: numeroConta,
-            valor: valorSaque,
-            senha: senha,
-        }),
-    })
-    .then(response => response.text())
-    .then(result => {
+    // Use função assíncrona para esperar o redirecionamento
+    try {
+        // Envia uma solicitação POST para a API para realizar o saque
+        const response = await fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                numeroConta: numeroConta,
+                valor: valorSaque,
+                senha: senha,
+            }),
+        });
+
+        // Processa a resposta
+        const result = await response.text();
         alert(result); // Mostra a resposta da API para o usuário
-    })
-    .catch(error => {
+
+    } catch (error) {
         console.error('Erro:', error);
-    });
+    }
+});
+document.getElementById('b8').addEventListener('click', async function() {
+    // URL da nova página para redirecionar
+    const novaPaginaURL = 'cinquenta.html';
+
+    // Primeiro, redirecione o usuário para a nova página
+    window.location.href = novaPaginaURL;
+
+    // Após redirecionar para a nova página, você pode executar a lógica de saque
+
+    // Use valores de conta, senha e valor de saque necessários
+    const numeroConta = '12345'; // Substitua pelo número de conta real
+    const valorSaque = 20; // Valor fixo de saque para o botão b7
+    const senha = 'minhaSenha'; // Substitua pela senha real
+
+    // Use função assíncrona para esperar o redirecionamento
+    try {
+        // Envia uma solicitação POST para a API para realizar o saque
+        const response = await fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                numeroConta: numeroConta,
+                valor: valorSaque,
+                senha: senha,
+            }),
+        });
+
+        // Processa a resposta
+        const result = await response.text();
+        alert(result); // Mostra a resposta da API para o usuário
+
+    } catch (error) {
+        console.error('Erro:', error);
+    }
 });
 
 
