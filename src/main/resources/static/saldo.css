@@ -1,7 +1,7 @@
 #caixa{
     width: 100%;
     height: 1100px;
-   background-color:#0F79BA;
+    background-color:#0F79BA;
    
     margin-top: 20px;
  
@@ -14,7 +14,7 @@
   
   }
 #cima{
-    background-color:#0F79BA;
+    background-color: #0F79BA;
     
  
     height: 80px;
@@ -50,7 +50,7 @@
     width: 700px;
     height: 200px;
     margin-left: 550px;
-    margin-top: 1px;
+    margin-top: -125px;
     border: 50px solid gray;
 
 }
@@ -93,7 +93,7 @@
 #b3 {
     width: 80px;
     height: 80px;
-    margin-left: 330px;
+    margin-left: 1490px;
     margin-top: 30px;
  
     cursor: pointer; /* Adicionando cursor pointer */
@@ -135,6 +135,7 @@
     height: 80px;
     margin-left: 1490px;
     margin-top: 30px;
+    margin-left: 330px;
     
 }
 
@@ -152,7 +153,7 @@
     height: 80px;
     margin-left: 1490px;
     margin-top: 30px;
-    cursor: ;
+    cursor:pointer ;
 }
 
 #tela{
@@ -163,21 +164,28 @@
     margin-left: 300px;
     border: 150px solid gray;
 
-    background-image: url(imagens/664457db-7000-4930-8562-9c35f694cb4e.webp);
+    background-image: url(imagens/Imagem_de_um_caixa_eletrnico_cor_azul_e_cinza_aa.jpg);
  
 }
 
   #me{
-    color: black;
+    color: white;
     font-size: 35px;
     margin-left: 30px;
     margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 400px;
   }
   #mes{
-    color:black;
+    color: white;
     font-size: 25px;
     margin-left: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 400px;
   }
+  #mensagem{
+    background-color: rgba(0, 0, 0, 0.1);
+}
 #t1{
     width: 135px;
     height: 55px;
@@ -284,7 +292,7 @@ cursor: pointer;
 
 
 #entrar{
-    margin-left: 550px;
+    margin-left: 1000px;
     margin-top: -52px;
     height: 75px;
     margin-top: -20px;
@@ -299,16 +307,27 @@ cursor: pointer;
     font-weight: bold;
     font-size: 35px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#saldo-disponivel{
+    color:white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+ 
 }
 #trar{
-    margin-top: 505px;
+    margin-top: 70px;
     position: relative;
 }
 #apagar{
     margin-left: 400px;   
     width: 300px;
     height: 70px;
-    margin-top: -200px;
+    margin-top: 0px;
     font-size: 25px;
     cursor: pointer;
 }
@@ -323,7 +342,7 @@ cursor: pointer;
 
 }
 #pg{
-    margin-top: -115px;
+    margin-top: -140px;
 }
 
 
@@ -482,6 +501,63 @@ height: 520px;
 #divb{
 margin-top: -60px;
 width: 200px;
+color: white;
+}
+/* Estilo para as divs #y0, #y1, #y2, #y3 */
+/* Estilo para a div #sacar */
+#sacar {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: -10px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Estilo para a div #depositar */
+#depositar {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: -10px;
+        margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+
+/* Estilo para a div #saldo */
+#saldo {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 700px;
+    margin-top: -170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Estilo para o container que contém o texto e o input */
+.input-container {
+  
+    align-items: center; /* Alinhar verticalmente os itens */
+
+    margin-top: 100px; /* Adiciona margem superior ao container */
+    gap: 0px; /* Remove o espaço entre o texto e o input */
+ 
 }
 #eyeIcon {
     cursor: pointer; /* Mostra cursor de ponteiro ao passar sobre o ícone */
@@ -498,6 +574,42 @@ width: 200px;
      Adiciona um pouco de padding para espaçamento */
      color: gray;
 }
+
+
+
+
+
+
+
+/* Estilo para a div #transferencia */
+#transferencia {
+    background-color: grey;
+    width: 300px;
+    height: 70px;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 700px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */
+.sacar,
+.depositar,
+.saldo,
+.transferencia {
+    font-size: 25px;
+    margin: 0; /* Remove qualquer margem padrão */
+    
+}
+
+
+
+
+
 
 
 

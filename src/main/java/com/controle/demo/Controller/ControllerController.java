@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -69,19 +70,30 @@ public class SaqueController {
     }
 }
 
-///@RestController
-//public class saldoController{
-    //@GetMapping("/api/saldo")
-    //public ResponseEntity<Double> consultarSaldo() {
-      //  if (conta != null) {
-          //  double saldo = conta.getSaldo();
-           // return ResponseEntity.ok(saldo);
-       // } else {
-            // Se a conta não estiver disponível, retorna um erro 404 (Not Found)
-          //  return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-      //  }
-   // }
-//}///
+@RestController
+@RequestMapping("/saldo")
+public class SaldoController {
+
+    @GetMapping("/consultar")
+    public ResponseEntity<Object> consultarSaldo(@RequestParam(required = true) String senha) {
+        // Verifica se a senha não está vazia
+        if (senha == null || senha.isEmpty()) {
+            return new ResponseEntity<>("Senha não fornecida.", HttpStatus.BAD_REQUEST);
+        }
+
+        // Substitua pela lógica real de verificação de senha
+        if (!"0376".equals(senha)) { 
+            return new ResponseEntity<>("Senha incorreta.", HttpStatus.FORBIDDEN);
+        }
+
+        // Aqui você pode adicionar a lógica para obter o saldo do sistema
+        double saldo = 1000.0; // Exemplo de saldo fixo
+
+        return new ResponseEntity<>(saldo, HttpStatus.OK);
+    }
+}
+
+
 
 
 

@@ -78,6 +78,7 @@
     height: 80px;
     margin-top: 170px;
     margin-left: 330px;
+
    
 }
 
@@ -85,7 +86,8 @@
     width: 80px;
     height: 80px;
     margin-top: 30px;
-    margin-left: 330px;
+ 
+    margin-left: 1490px;
     cursor: pointer; /* Adicionando cursor pointer */
    /* Definindo uma cor de fundo para teste */
 }
@@ -95,15 +97,16 @@
     height: 80px;
     margin-left: 1490px;
     margin-top: 30px;
- 
+    
     cursor: pointer; /* Adicionando cursor pointer */
 }
 
 #b4 {
     width: 80px;
     height: 80px;
-    margin-left: 330px;
+    margin-left: 1490px;
     margin-top: 30px;
+
     cursor: pointer; /* Adicionando cursor pointer */
 }
 
@@ -111,22 +114,26 @@
     width: 80px;
     height: 80px;
     margin-left: 570px;
-    cursor: pointer; /* Adicionando cursor pointer */
+    cursor: pointer;
+ /* Adicionando cursor pointer */
 }
 
 #bb5{
     width: 30px;
     height: 30px;
     margin-left: 920px;
-    margin-top: -410px; /* Evite margens negativas se possível */
+    margin-top: -410px;
+ /* Evite margens negativas se possível */
     
 }
 
 #b6{
     width: 80px;
     height: 80px;
-    margin-left: 1490px;
+       margin-left: 330px;
     margin-top: 80px;
+  
+
     
 }
 
@@ -136,6 +143,7 @@
     margin-left: 1490px;
     margin-top: 30px;
     margin-left: 330px;
+  
     
 }
 
@@ -151,7 +159,8 @@
 #b8{
     width: 80px;
     height: 80px;
-    margin-left: 1490px;
+
+    margin-left: 330px;
     margin-top: 30px;
     cursor:pointer ;
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>controle</title>
    
- <link rel="stylesheet" href="opcao2.css">
+ <link rel="stylesheet" href="vintereais.css">
 </head>
 <body>
     <header>
@@ -57,10 +57,10 @@
         <button id="b2" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button" class="botao"   onclick="window.location.href='saldo.html'" ></button>
+        <button id="b3" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
 
     <div>
-        <button id="b4" type="button" class="botao" onclick="window.location.href='depoisto.html'" ></button>
+        <button id="b4" type="button" class="botao"></button>
     </div>
     
     <div id="bb5">
@@ -70,10 +70,10 @@
         <button id="b6" type="button"  class="botao"></button>
     </div>
     <div>
-        <button id="b7" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
+        <button id="b7" type="button" class="botao"  ></button>
     </div>
     <div>
-        <button id="b8" type="button" class="botao" onclick="window.location.href='DEPOSITO.html'"></button>
+        <button id="b8" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
     </div>
     <div id="re"></div>
 
@@ -81,29 +81,31 @@
     </div>
  </div>
 
- <div id="tela">
-    <p id="me"> Bem-vindo à sua conta Cauã </p>
-    <p id="me"> Escolha uma opção para poder prosseguir </p><br>
+ 
 
-    <div id="sacar">
-        <p class="sacar"> SACAR</p>
+ <div id="tela">
+    <p id="me">
+        saldo processado  com sucesso 
+    </p><br>
+    <p id="mes">
+        para sair da sua conta ou realizar outra operação 
+    </p> <br>
+    <p id="mes"> 
+        aperte o botão CANCELAR 
+    </p><br>
+  
     </div>
-    <div id="depositar">
-        <p class="depositar"> DEPOSITAR</p>
-    </div>
-    <div id="saldo">
-        <p class="saldo"> SALDO</p>
-    </div>
-    <div id="transferencia">
-        <p class="transferencia"> TRANSFERÊNCIA</p>
-    </div>
-    <div id="trar">
-        <button id="entrar" type="button" class="botao" >ENTRAR
-            <div id="cor"></div>
-        </button>
-    </div>
-    <p id="mensagem"></p>
 </div>
+
+<div id="trar">
+    <button id="entrar" type="button" class="botao" >ENTRAR
+        <div id="cor"></div>
+    </button>
+</div>
+<p id="mensagem"></p>
+    
+</div>
+
 
 
  <div id="teclado">
@@ -224,38 +226,60 @@
             });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const entrarButton = document.getElementById('entrar');
+    const mensagemElement = document.getElementById('mensagem');
+    const campoSenha = document.getElementById('campo-senha'); 
 
+    entrarButton.addEventListener('click', function() {
+        const senha = campoSenha.value;
+        const valorSaque = 100; // Aqui você pode ajustar para o valor que desejar
 
+        if (senha.trim() === '') {
+            mensagemElement.innerText = "Por favor, digite sua senha.";
+            return;
+        }
 
-document.getElementById('b8').addEventListener('click', function() {
-    // Preencha com os valores de conta, senha e valor de saque necessários
-    const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 50; // Valor fixo de saque para o botão b8
-    const senha = 'minhaSenha'; // Substitua pela senha real
-
-    // Envia uma solicitação POST para a API para realizar o saque
-    fetch('/api/saque', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            numeroConta: numeroConta,
-            valor: valorSaque,
-            senha: senha,
-        }),
-    })
-    .then(response => response.text())
-    .then(result => {
-        alert(result); // Mostra a resposta da API para o usuário
-    })
-    .catch(error => {
-        console.error('Erro:', error);
+        fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded', // Ajuste o tipo de conteúdo conforme necessário
+            },
+            body: `senha=${senha}&valor=${valorSaque}`, // Envie a senha e o valor do saque como parâmetros
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
+            }
+        })
+        .then(data => {
+            // Exibir mensagem de sucesso ao usuário
+            alert(data);
+            window.location.href = '/Sconcluido.html';
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao processar a solicitação. Por favor, tente novamente.');
+        });
     });
 });
 
 
-    
+
+// Selecionar o botão "apagar" e o campo de senha
+const botaoApagar = document.getElementById('apagar');
+const campoSenha = document.getElementById('campo-senha');
+
+// Adicionar um evento de clique ao botão "apagar"
+botaoApagar.addEventListener('click', function() {
+    // Limpar o campo de senha
+    campoSenha.value = '';
+});
+
+
+
 </script>
 
 
