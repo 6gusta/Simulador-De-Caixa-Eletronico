@@ -86,14 +86,16 @@
 
 
     <p id="valor">VALOR </p>
-    <input type="" type="number">
+    <input id="valor-saque" type="text" placeholder="Digite o valor do saque" min="0">
+    <p id="mensagem"></p>
+
 </div>
 <div id="trar">
     <button id="entrar" type="button" class="botao" >ENTRAR
         <div id="cor"></div>
     </button>
 </div>
-<p id="mensagem"></p>
+
     
 </div>
 
@@ -189,96 +191,51 @@
         }
 
         const entrarButton = document.getElementById('entrar');
-    const numeroContaInput = document.getElementById('numeroConta');
-    const mensagemElement = document.getElementById('mensagem');
-    
+        const mensagemElement = document.getElementById('mensagem');
+        const campoValorSaque = document.getElementById('valor-saque'); // Adicionado aqui
 
-    entrarButton.addEventListener('click', function() {
-        let numeroContaDigitado = numeroContaInput.value;
+        entrarButton.addEventListener('click', function() {
+            const valorSaque = campoValorSaque.value;
 
-        fetch(`/api/verificar-conta?numeroConta=${numeroContaDigitado}`)
-            .then(response => response.text())
-            .then(data => {
-                if (data === "Conta válida") {
-                    console.log("Conta válida");
-                    // Redirecionar para outra página
-                    window.location.href = "opcoes.html";
+            if (valorSaque.trim() === '' || isNaN(parseFloat(valorSaque)) || parseFloat(valorSaque) <= 0) {
+                mensagemElement.innerText = "Por favor, digite um valor válido para o saque.";
+                return;
+            }
+
+            fetch('/api/saque', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `valor=${valorSaque}`, // Apenas envie o valor do saque
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
                 } else {
-                    console.log('%cEsta é uma mensagem de console estilizada', 'color: white; font-size: 20px;');
-
-                    alert( " se fudeu ");
-
-                    // Exibir mensagem de erro para o usuário
-                    mensagemElement.innerText = "Número da conta inválido";
+                    throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
                 }
             })
+            .then(data => {
+                mensagemElement.innerText = data;
+                setTimeout(function() {
+                    window.location.href = '/Sconcluido.html';
+                }, 2000); // Redirecionar após 2 segundos
+            })
             .catch(error => {
-                console.error("Erro ao verificar a conta:", error);
-            });
-    });
-});
-const express = require('express');
-const app = express();
-
-// Middleware para analisar requisições com dados JSON
-app.use(express.json());
-
-// Variável para contar o número de tentativas de senha incorreta
-let tentativasSenha = 0;
-
-// Endpoint para realizar saque e verificar a senha
-app.post('/api/saque', (req, res) => {
-    // Extrai as informações da requisição
-    const { saque, senha, conta } = req.body;
-
-    // Verifica se o número de tentativas de senha incorreta é menor que 3
-    if (tentativasSenha < 3) {
-        // Verifica se a senha fornecida é correta
-        if (conta.senha === senha) {
-            // Verifica se o saque é possível com o saldo disponível
-            if (saque <= conta.valor) {
-                // Realiza o saque e atualiza o saldo da conta
-                conta.valor -= saque;
-                res.status(200).json({
-                    mensagem: 'Saque realizado com sucesso',
-                    novoSaldo: conta.valor
-                });
-            } else {
-                res.status(400).json({
-                    mensagem: 'Saldo insuficiente'
-                });
-            }
-        } else {
-            // Senha incorreta, incrementa o contador de tentativas de senha
-            tentativasSenha++;
-            if (tentativasSenha >= 3) {
-                res.status(403).json({
-                    mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
-                });
-            } else {
-                res.status(401).json({
-                    mensagem: 'Senha incorreta'
-                });
-            }
-        }
+    console.error('Erro:', error);
+    if (error instanceof TypeError) {
+        mensagemElement.innerText = 'Erro: Houve um problema de tipo ao realizar a solicitação.';
+    } else if (error instanceof SyntaxError) {
+        mensagemElement.innerText = 'Erro: Houve um problema de sintaxe na resposta da API.';
+    } else if (error instanceof RangeError) {
+        mensagemElement.innerText = 'Erro: Houve um erro de intervalo ao realizar a solicitação.';
     } else {
-        // Número de tentativas de senha incorreta excedido
-        res.status(403).json({
-            mensagem: 'Muitas tentativas inválidas. Seu cartão foi bloqueado.'
-        });
+        mensagemElement.innerText = `Erro: ${error.message}`;
     }
 });
 
-// Porta do servidor
-const port = 3000;
-
-// Inicia o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
-});
-
-    
+        });
+    });
 </script>
-
-
 </html>

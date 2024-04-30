@@ -340,6 +340,49 @@ document.getElementById('b8').addEventListener('click', async function() {
 
 
 });
+document.getElementById('entrar').addEventListener('click', async function() {
+    // URL da nova página para redirecionar
+    const novaPaginaURL = 'cinquenta.html';
+
+    // Primeiro, redirecione o usuário para a nova página
+    window.location.href = novaPaginaURL;
+
+    // Após redirecionar para a nova página, você pode executar a lógica de saque
+
+    // Use valores de conta e senha necessários
+    const numeroConta = '12345'; // Substitua pelo número de conta real
+    const senha = 'minhaSenha'; // Substitua pela senha real
+
+    // Obtenha o valor do saque do campo de entrada de texto
+    const valorSaqueInput = document.getElementById('valor-saque-input');
+    const valorSaque = parseFloat(valorSaqueInput.value);
+
+    // Verifique se o valor do saque é válido (não negativo e não superior ao saldo disponível, se necessário)
+
+    // Use função assíncrona para esperar o redirecionamento
+    try {
+        // Envia uma solicitação POST para a API para realizar o saque
+        const response = await fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                numeroConta: numeroConta,
+                valor: valorSaque,
+                senha: senha,
+            }),
+        });
+
+        // Processa a resposta
+        const result = await response.text();
+        alert(result); // Mostra a resposta da API para o usuário
+
+    } catch (error) {
+        console.error('Erro:', error);
+    }
+});
+
     
 </script>
 
