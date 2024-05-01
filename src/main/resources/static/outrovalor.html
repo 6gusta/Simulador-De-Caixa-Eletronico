@@ -222,7 +222,7 @@
                     window.location.href = '/Sconcluido.html';
                 }, 2000); // Redirecionar após 2 segundos
             })
-            .catch(error => {
+            .catch(error => {""
     console.error('Erro:', error);
     if (error instanceof TypeError) {
         mensagemElement.innerText = 'Erro: Houve um problema de tipo ao realizar a solicitação.';
@@ -231,7 +231,7 @@
     } else if (error instanceof RangeError) {
         mensagemElement.innerText = 'Erro: Houve um erro de intervalo ao realizar a solicitação.';
     } else {
-        mensagemElement.innerText = `Erro: ${error.message}`;
+        mensagemElement.innerText = `Erro: ${error.message}`;""
     }
 });
 

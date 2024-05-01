@@ -99,7 +99,26 @@ public class SaldoController {
 
 
 
-    
+@RestController
+public class DepositoController {
+
+    @PostMapping("/api/deposito")
+    public ResponseEntity<String> realizarDeposito(@RequestParam int valor) {
+        // Verifica se o valor do depósito é válido
+        if (valor <= 0) {
+            return new ResponseEntity<>("Valor de depósito inválido.", HttpStatus.BAD_REQUEST);
+        }
+
+        // Aqui você pode implementar a lógica para adicionar o valor ao saldo do usuário
+        // Isso incluirá a atualização do saldo após o depósito, etc.
+
+        // Simulação de sucesso
+        double novoSaldo = 1000 + valor; // Substitua pelo novo saldo após o depósito
+        String mensagemSucesso = String.format("Depósito de R$ %d realizado com sucesso. Novo saldo: R$ %.2f", valor, novoSaldo);
+        return ResponseEntity.ok(mensagemSucesso);
+    }
+}
+
 
 
     

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>controle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    
- <link rel="stylesheet" href="sacar.css">
+ <link rel="stylesheet" href="vintereais.css">
 </head>
 <body>
     <header>
@@ -57,10 +58,10 @@
         <button id="b2" type="button" class="botao"></button>
     </div>
     <div>
-        <button id="b3" type="button" class="botao" ></button>
+        <button id="b3" type="button" class="botao"  onclick="window.location.href='sacar.html'"></button>
 
     <div>
-        <button id="b4" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
+        <button id="b4" type="button" class="botao"></button>
     </div>
     
     <div id="bb5">
@@ -73,7 +74,7 @@
         <button id="b7" type="button" class="botao"  ></button>
     </div>
     <div>
-        <button id="b8" type="button" class="botao" ></button>
+        <button id="b8" type="button" class="botao" onclick="window.location.href='outrovalor.html'"></button>
     </div>
     <div id="re"></div>
 
@@ -81,37 +82,38 @@
     </div>
  </div>
 
- <div id="tela">
-    <p id="me">Escolha o valor que deseja Depositar:</p>
-    <p id="me">Em seguida, pressione o botão correspondente ao valor selecionado para continuar.</p><br>
-    
+ 
 
-    <div id="sacar">
-        <p class="sacar">R$ 20,00 </p>
+ <div id="tela">
+    <p id="me">
+        insira sua senha para prosseguir com o saque
+    </p>
+    <div class="input-container" id="sen">
+        <input id="campo-senha" type="password" placeholder="Digite sua senha" maxlength="4">
+        <span id="togglePassword" onclick="togglePasswordVisibility()">
+    <i id="eyeIcon" class="fas fa-eye-slash"></i>
+</span>
+<div id="mensagem"></div>
+
     </div>
-    <div id="depositar">
-        <p class="depositar"> R$ 50,00</p>
-    </div>
-    <div id="saldo">
-        <p class="saldo"> R$ 100,00</p>
-    </div>
-    <div id="transferencia">
-        <p class="transferencia"> OUTRO VALOR </p>
-    </div>
-    <div id="trar">
-        <button id="entrar" type="button" class="botao" >ENTRAR
-            <div id="cor"></div>
-        </button>
-    </div>
-    <p id="mensagem"></p>
 </div>
+
+<div id="trar">
+    <button id="entrar" type="button" class="botao" >ENTRAR
+        <div id="cor"></div>
+    </button>
+</div>
+<p id="mensagem"></p>
+    
+</div>
+
 
 
  <div id="teclado">
     <div>
         <button id="t1" type="button" class="botao">1</button>
     </div>
-    <div>
+    <div>S
         <button id="t2" type="button" class="botao">4</button>
     </div>
     <div>
@@ -214,7 +216,7 @@
                 } else {
                     console.log('%cEsta é uma mensagem de console estilizada', 'color: white; font-size: 20px;');
 
-                    alert( " se fudeu ");
+        
 
                     // Exibir mensagem de erro para o usuário
                     mensagemElement.innerText = "Número da conta inválido";
@@ -224,123 +226,74 @@
                 console.error("Erro ao verificar a conta:", error);
             });
     });
-    document.getElementById('b7').addEventListener('click', async function() {
-    // URL da nova página para redirecionar
-    const novaPaginaURL = 'D20.html';
+});
 
-    // Primeiro, redirecione o usuário para a nova página
-    window.location.href = novaPaginaURL;
 
-    // Após redirecionar para a nova página, você pode executar a lógica de saque
 
-    // Use valores de conta, senha e valor de saque necessários
-    const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 20; // Valor fixo de saque para o botão b7
-    const senha = 'minhaSenha'; // Substitua pela senha real
+// Selecionar o botão "apagar" e o campo de senha
+const botaoApagar = document.getElementById('apagar');
+const campoSenha = document.getElementById('campo-senha');
 
-    // Use função assíncrona para esperar o redirecionamento
-    try {
-        // Envia uma solicitação POST para a API para realizar o saque
-        const response = await fetch('/api/saque', {
+// Adicionar um evento de clique ao botão "apagar"
+botaoApagar.addEventListener('click', function() {
+    // Limpar o campo de senha
+    campoSenha.value = '';
+});
+function togglePasswordVisibility() {
+            // Seleciona o campo de entrada de senha e o ícone de olho
+            const campoSenha = document.getElementById('campo-senha');
+            const eyeIcon = document.getElementById('eyeIcon');
+
+            // Verifica o tipo atual do campo de entrada de senha
+            if (campoSenha.type === 'password') {
+                // Se for 'password', mude para 'text' para mostrar a senha
+                campoSenha.type = 'text';
+                // Altere o ícone para 'fa-eye' para indicar que a senha está visível
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                // Se for 'text', mude para 'password' para ocultar a senha
+                campoSenha.type = 'password';
+                // Altere o ícone para 'fa-eye-slash' para indicar que a senha está oculta
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+    const entrarButton = document.getElementById('entrar'); // Definindo a variável entrarButton corretamente
+    const mensagemElement = document.getElementById('mensagem');
+
+    entrarButton.addEventListener('click', function() { // Adicionando um ouvinte de evento de clique ao botão "ENTRAR"
+        fetch('/api/deposito', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: JSON.stringify({
-                numeroConta: numeroConta,
-                valor: valorSaque,
-                senha: senha,
-            }),
+            body: `valor=20`, // Definindo o valor do depósito como 20 fixo
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Erro ao realizar o depósito. Por favor, tente novamente.');
+            }
+        })
+        .then(data => {
+            mensagemElement.innerText = data;
+            setTimeout(function() {
+                window.location.href = 'Dconcluido.html'; // Redirecionamento para a página de conclusão do depósito
+            }, 2000);
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            mensagemElement.innerText = 'Erro ao realizar o depósito. Por favor, tente novamente';
         });
-
-        // Processa a resposta
-        const result = await response.text();
-        alert(result); // Mostra a resposta da API para o usuário
-
-    } catch (error) {
-        console.error('Erro:', error);
-    }
+    });
 });
 
 
-document.getElementById('b3').addEventListener('click', async function() {
-    // URL da nova página para redirecionar
-    const novaPaginaURL = 'cem.html';
-
-    // Primeiro, redirecione o usuário para a nova página
-    window.location.href = novaPaginaURL;
-
-    // Após redirecionar para a nova página, você pode executar a lógica de saque
-
-    // Use valores de conta, senha e valor de saque necessários
-    const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 20; // Valor fixo de saque para o botão b7
-    const senha = 'minhaSenha'; // Substitua pela senha real
-
-    // Use função assíncrona para esperar o redirecionamento
-    try {
-        // Envia uma solicitação POST para a API para realizar o saque
-        const response = await fetch('/api/saque', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                numeroConta: numeroConta,
-                valor: valorSaque,
-                senha: senha,
-            }),
-        });
-
-        // Processa a resposta
-        const result = await response.text();
-        alert(result); // Mostra a resposta da API para o usuário
-
-    } catch (error) {
-        console.error('Erro:', error);
-    }
-});
-document.getElementById('b8').addEventListener('click', async function() {
-    // URL da nova página para redirecionar
-    const novaPaginaURL = 'cinquenta.html';
-
-    // Primeiro, redirecione o usuário para a nova página
-    window.location.href = novaPaginaURL;
-
-    // Após redirecionar para a nova página, você pode executar a lógica de saque
-
-    // Use valores de conta, senha e valor de saque necessários
-    const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 20; // Valor fixo de saque para o botão b7
-    const senha = 'minhaSenha'; // Substitua pela senha real
-
-    // Use função assíncrona para esperar o redirecionamento
-    try {
-        // Envia uma solicitação POST para a API para realizar o saque
-        const response = await fetch('/api/saque', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                numeroConta: numeroConta,
-                valor: valorSaque,
-                senha: senha,
-            }),
-        });
-
-        // Processa a resposta
-        const result = await response.text();
-        alert(result); // Mostra a resposta da API para o usuário
-
-    } catch (error) {
-        console.error('Erro:', error);
-    }
-});
 
 
-});
-    
 </script>
 
 
