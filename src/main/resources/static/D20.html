@@ -260,16 +260,27 @@ function togglePasswordVisibility() {
             }
         }
         document.addEventListener('DOMContentLoaded', function() {
-    const entrarButton = document.getElementById('entrar'); // Definindo a variável entrarButton corretamente
+    const entrarButton = document.getElementById('entrar');
     const mensagemElement = document.getElementById('mensagem');
-
-    entrarButton.addEventListener('click', function() { // Adicionando um ouvinte de evento de clique ao botão "ENTRAR"
+    
+    entrarButton.addEventListener('click', function() {
+        const senha = document.getElementById('campo-senha').value; // Obtém o valor da senha
+        
+        // Verifica se a senha está preenchida
+        if (!senha) {
+            mensagemElement.innerText = 'Por favor, insira sua senha.';
+            return;
+        }
+        
+        // Realiza a solicitação de depósito
+        const valorDeposito = 20; // Definindo o valor do depósito como 20 fixo
+        
         fetch('/api/deposito', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: `valor=20`, // Definindo o valor do depósito como 20 fixo
+            body: `valor=${valorDeposito}&senha=${senha}`,
         })
         .then(response => {
             if (response.ok) {
@@ -290,6 +301,8 @@ function togglePasswordVisibility() {
         });
     });
 });
+
+
 
 
 
