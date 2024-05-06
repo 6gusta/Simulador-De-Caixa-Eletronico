@@ -263,21 +263,19 @@
 });
 
 
+});
 document.getElementById('b3').addEventListener('click', async function() {
     // URL da nova página para redirecionar
-    const novaPaginaURL = 'cem.html';
+    const novaPaginaURL = 'D100.html';
 
     // Primeiro, redirecione o usuário para a nova página
     window.location.href = novaPaginaURL;
 
-    // Após redirecionar para a nova página, você pode executar a lógica de saque
-
     // Use valores de conta, senha e valor de saque necessários
     const numeroConta = '12345'; // Substitua pelo número de conta real
-    const valorSaque = 20; // Valor fixo de saque para o botão b7
-    const senha = 'minhaSenha'; // Substitua pela senha real
+    const valorSaque = 100; // Valor fixo de saque para o botão b8
+    const senha = '0376'; // Substitua pela senha real
 
-    // Use função assíncrona para esperar o redirecionamento
     try {
         // Envia uma solicitação POST para a API para realizar o saque
         const response = await fetch('/api/saque', {
@@ -300,9 +298,12 @@ document.getElementById('b3').addEventListener('click', async function() {
         console.error('Erro:', error);
     }
 });
+
+
+
 document.getElementById('b8').addEventListener('click', async function() {
     // URL da nova página para redirecionar
-    const novaPaginaURL = 'cinquenta.html';
+    const novaPaginaURL = 'D50.html';
 
     // Primeiro, redirecione o usuário para a nova página
     window.location.href = novaPaginaURL;
@@ -335,8 +336,6 @@ document.getElementById('b8').addEventListener('click', async function() {
     }
 });
 
-
-});
     
 </script>
 

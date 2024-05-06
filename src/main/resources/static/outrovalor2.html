@@ -86,7 +86,7 @@
 
  <div id="tela">
     <p id="me">
-        insira sua senha para prosseguir com o Deposito
+        insira sua senha para prosseguir com o saque
     </p>
     <div class="input-container" id="sen">
         <input id="campo-senha" type="password" placeholder="Digite sua senha" maxlength="4">
@@ -113,7 +113,7 @@
     <div>
         <button id="t1" type="button" class="botao">1</button>
     </div>
-    <div>S
+    <div>
         <button id="t2" type="button" class="botao">4</button>
     </div>
     <div>
@@ -227,7 +227,48 @@
             });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const entrarButton = document.getElementById('entrar');
+    const mensagemElement = document.getElementById('mensagem');
+    const campoSenha = document.getElementById('campo-senha'); 
 
+    entrarButton.addEventListener('click', function() {
+        const senha = campoSenha.value;
+        const valorSaque = 100; // Valor do saque ajustado para 20 reais
+
+        if (senha.trim() === '') {
+            mensagemElement.innerText = "Por favor, digite sua senha.";
+            return;
+        }
+
+        fetch('/api/saque', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded', // Ajuste o tipo de conteúdo conforme necessário
+            },
+            body: `senha=${senha}&valor=${valorSaque}`, // Envie a senha e o valor do saque como parâmetros
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
+            }
+        })
+        .then(data => {
+            // Exibir mensagem de sucesso ao usuário
+            mensagemElement.innerText = data;
+            // Aguardar 2 segundos antes de redirecionar para a página de conclusão do saque
+            setTimeout(function() {
+                window.location.href = '/Sconcluido.html';
+            }, 5000);
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            mensagemElement.innerText = 'Erro ao processar a solicitação. Por favor, tente novamente.';
+        });
+    });
+});
 
 
 // Selecionar o botão "apagar" e o campo de senha
@@ -259,51 +300,6 @@ function togglePasswordVisibility() {
                 eyeIcon.classList.add('fa-eye-slash');
             }
         }
-        document.addEventListener('DOMContentLoaded', function() {
-    const entrarButton = document.getElementById('entrar');
-    const mensagemElement = document.getElementById('mensagem');
-    
-    entrarButton.addEventListener('click', function() {
-        const senha = document.getElementById('campo-senha').value; // Obtém o valor da senha
-        
-        // Verifica se a senha está preenchida
-        if (!senha) {
-            mensagemElement.innerText = 'Por favor, insira sua senha.';
-            return;
-        }
-        
-        // Realiza a solicitação de depósito
-        const valorDeposito = 20; // Definindo o valor do depósito como 20 fixo
-        
-        fetch('/api/deposito', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `valor=${valorDeposito}&senha=${senha}`,
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.text();
-            } else {
-                throw new Error('Erro ao realizar o depósito. Por favor, tente novamente.');
-            }
-        })
-        .then(data => {
-            mensagemElement.innerText = data;
-            setTimeout(function() {
-                window.location.href = 'Dconcluido.html'; // Redirecionamento para a página de conclusão do depósito
-            }, 2000);
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            mensagemElement.innerText = 'Erro ao realizar o depósito. Por favor, tente novamente';
-        });
-    });
-});
-
-
-
 
 
 

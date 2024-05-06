@@ -6,6 +6,8 @@
     <title>controle</title>
    
  <link rel="stylesheet" href="outrovalor.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.7/imask.min.js"></script>
+ 
 </head>
 <body>
     <header>
@@ -86,8 +88,10 @@
 
 
     <p id="valor">VALOR </p>
-    <input id="valor-saque" type="text" placeholder="Digite o valor do saque" min="0">
-    <p id="mensagem"></p>
+    <label for="valor-saque">Valor do Saque:</label>
+    <input id="valor-saque" type="text" placeholder="Digite o valor do saque" min="0" max="8">
+</div>
+
 
 </div>
 <div id="trar">
@@ -152,89 +156,33 @@
     
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const burgerIcon = document.getElementById('burger');
-        const menu = document.getElementById('menu');
-
-        burgerIcon.addEventListener('click', function(event) {
-            event.stopPropagation();
-            toggleMenu();
-        });
-
-        document.addEventListener('click', function(event) {
-            if (!menu.contains(event.target) && menu.style.display === 'block') {
-                menu.style.display = 'none';
+        document.addEventListener('DOMContentLoaded', function() {
+        // Cria a máscara de moeda para o input do valor do saque
+        var mascaraMoeda = IMask(
+            document.getElementById('valor-saque'), 
+            {
+                mask: 'R$ num',  // Utiliza a máscara de moeda
+                blocks: {
+                    num: {
+                        mask: Number,  // Converte o valor para número
+                        thousandsSeparator: '.',  // Utiliza ponto como separador de milhares
+                        radix: ',',  // Utiliza vírgula como separador decimal
+                        scale: 2  // Define o número de casas decimais
+                    }
+                }
             }
-        });
-
-        function toggleMenu() {
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        function changeColor(event, color) {
-            var buttons = document.getElementsByClassName('botao');
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].style.backgroundColor = '';
-            }
-           
-        }
-
-        var buttons = document.getElementsByClassName('botao');
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function(event) {
-           
-            });
-        }
+        );
 
         const entrarButton = document.getElementById('entrar');
         const mensagemElement = document.getElementById('mensagem');
-        const campoValorSaque = document.getElementById('valor-saque'); // Adicionado aqui
-
+        
         entrarButton.addEventListener('click', function() {
-            const valorSaque = campoValorSaque.value;
+            const valorSaque = document.getElementById('valor-saque').value;
+            
+            
 
-            if (valorSaque.trim() === '' || isNaN(parseFloat(valorSaque)) || parseFloat(valorSaque) <= 0) {
-                mensagemElement.innerText = "Por favor, digite um valor válido para o saque.";
-                return;
-            }
-
-            fetch('/api/saque', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `valor=${valorSaque}`, // Apenas envie o valor do saque
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.text();
-                } else {
-                    throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
-                }
-            })
-            .then(data => {
-                mensagemElement.innerText = data;
-                setTimeout(function() {
-                    window.location.href = '/Sconcluido.html';
-                }, 2000); // Redirecionar após 2 segundos
-            })
-            .catch(error => {""
-    console.error('Erro:', error);
-    if (error instanceof TypeError) {
-        mensagemElement.innerText = 'Erro: Houve um problema de tipo ao realizar a solicitação.';
-    } else if (error instanceof SyntaxError) {
-        mensagemElement.innerText = 'Erro: Houve um problema de sintaxe na resposta da API.';
-    } else if (error instanceof RangeError) {
-        mensagemElement.innerText = 'Erro: Houve um erro de intervalo ao realizar a solicitação.';
-    } else {
-        mensagemElement.innerText = `Erro: ${error.message}`;""
-    }
-});
-
+            // Redirecionamento para outra página
+            window.location.href = 'outrovalor2.html';
         });
     });
 </script>
