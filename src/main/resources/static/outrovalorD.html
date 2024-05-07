@@ -86,7 +86,7 @@
 
  <div id="tela">
     <p id="me">
-        insira sua senha para prosseguir com o saque
+        insira sua senha para prosseguir com o deposito
     </p>
     <div class="input-container" id="sen">
         <input id="campo-senha" type="password" placeholder="Digite sua senha" maxlength="4">
@@ -200,61 +200,61 @@
 
       
     });
-
     document.addEventListener('DOMContentLoaded', function() {
     const entrarButton = document.getElementById('entrar');
     const mensagemElement = document.getElementById('mensagem');
-    const campoSenha = document.getElementById('campo-senha');
 
     entrarButton.addEventListener('click', function() {
-        const senha = campoSenha.value;
+        const senha = document.getElementById('campo-senha').value; // Obtém o valor da senha
+        
+        // Verifica se a senha está preenchida
+        if (!senha) {
+            mensagemElement.innerText = 'Por favor, insira sua senha.';
+            return;
+        }
+
+        // Simula a escolha de uma opção de saque aleatória
         const opcoesSaque = {
             saque1: 100,
             saque2: 200,
             saque3: 300,
             saque4: 400,
-            // Adicione quantas opções de saque quiser aqui
         };
+        const opcoes = Object.values(opcoesSaque);
+        const valorSaque = opcoes[Math.floor(Math.random() * opcoes.length)];
 
-        // Aqui você pode definir a opção de saque desejada
-        const opcaoSelecionada = 'saque3';
-        const valorSaque = opcoesSaque[opcaoSelecionada];
-
-        if (senha.trim() === '') {
-            mensagemElement.innerText = "Por favor, digite sua senha.";
-            return;
-        }
-
-        fetch('/api/saque', {
+        // Realiza a solicitação de depósito com o valor escolhido
+        fetch('/api/deposito', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded', // Ajuste o tipo de conteúdo conforme necessário
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: `senha=${senha}&valor=${valorSaque}`, // Envie a senha e o valor do saque como parâmetros
+            body: `valor=${valorSaque}&senha=${senha}`,
         })
         .then(response => {
             if (response.ok) {
                 return response.text();
             } else {
-                throw new Error('Erro ao realizar o saque. Por favor, tente novamente.');
+                throw new Error('Erro ao realizar o depósito. Por favor, tente novamente.');
             }
         })
         .then(data => {
-            // Exibir mensagem de sucesso ao usuário
             mensagemElement.innerText = data;
-            // Aguardar 5 segundos antes de redirecionar para a página de conclusão do saque
             setTimeout(function() {
-                window.location.href = '/Sconcluido.html';
-            }, 5000);
+                window.location.href = 'Dconcluido.html'; // Redirecionamento para a página de conclusão do depósito
+            }, 2000);
         })
         .catch(error => {
             console.error('Erro:', error);
-            mensagemElement.innerText = 'Erro ao processar a solicitação. Por favor, tente novamente.';
+            mensagemElement.innerText = 'Erro ao realizar o depósito. Por favor, tente novamente';
         });
     });
 });
 
 
+
+
+    
 
 // Selecionar o botão "apagar" e o campo de senha
 const botaoApagar = document.getElementById('apagar');
