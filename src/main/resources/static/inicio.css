@@ -120,6 +120,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 22px;
+    text-decoration: none;
   }
   #b{
     margin-top: 40px;
@@ -130,8 +131,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 40px;
-    font-size: 20px;
+    margin-left: 10px;
+    font-size: 22px;
   }
   #b:hover{
     background-color: #0056b3;

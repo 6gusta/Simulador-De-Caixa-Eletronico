@@ -78,6 +78,7 @@
     height: 80px;
     margin-top: 170px;
     margin-left: 330px;
+
    
 }
 
@@ -85,7 +86,8 @@
     width: 80px;
     height: 80px;
     margin-top: 30px;
-    margin-left: 330px;
+ 
+    margin-left: 1490px;
     cursor: pointer; /* Adicionando cursor pointer */
    /* Definindo uma cor de fundo para teste */
 }
@@ -95,15 +97,16 @@
     height: 80px;
     margin-left: 1490px;
     margin-top: 30px;
- 
+    
     cursor: pointer; /* Adicionando cursor pointer */
 }
 
 #b4 {
     width: 80px;
     height: 80px;
-    margin-left: 330px;
+    margin-left: 1490px;
     margin-top: 30px;
+
     cursor: pointer; /* Adicionando cursor pointer */
 }
 
@@ -111,22 +114,26 @@
     width: 80px;
     height: 80px;
     margin-left: 570px;
-    cursor: pointer; /* Adicionando cursor pointer */
+    cursor: pointer;
+ /* Adicionando cursor pointer */
 }
 
 #bb5{
     width: 30px;
     height: 30px;
     margin-left: 920px;
-    margin-top: -410px; /* Evite margens negativas se possível */
+    margin-top: -410px;
+ /* Evite margens negativas se possível */
     
 }
 
 #b6{
     width: 80px;
     height: 80px;
-    margin-left: 1490px;
+       margin-left: 330px;
     margin-top: 80px;
+  
+
     
 }
 
@@ -136,6 +143,7 @@
     margin-left: 1490px;
     margin-top: 30px;
     margin-left: 330px;
+  
     
 }
 
@@ -151,9 +159,10 @@
 #b8{
     width: 80px;
     height: 80px;
-    margin-left: 1490px;
+
+    margin-left: 330px;
     margin-top: 30px;
-    cursor: ;
+    cursor:pointer ;
 }
 
 #tela{
@@ -173,11 +182,15 @@
     font-size: 35px;
     margin-left: 30px;
     margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 600px;
   }
   #mes{
     color: white;
     font-size: 25px;
     margin-left: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 700px;
   }
 #t1{
     width: 135px;
@@ -257,39 +270,37 @@ cursor: pointer;
 
 }
 .duvidas{
-    border-bottom: 1px solid black;
-    width: 400px;
-    height: 20px;
-    
-   
-  }
-  .duvidas:hover{
-    background-color: rgba(169, 169, 169, 0.39);
-  }
-  .duvida:hover{
-    background-color: rgba(169, 169, 169, 0.39);
-  }
-  .duvida{
-    border-bottom: 1px solid black;
-    width: 400px;
-    height: 60px;
-    background-color: #007bff;
-    color: white;
-    margin-top: -50px;
-    font-size: 25px;
-    
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 20px;
   
-  }
-  .duvida p {
+ 
+}
+.duvidas:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida:hover{
+  background-color: rgba(169, 169, 169, 0.39);
+}
+.duvida{
+  border-bottom: 1px solid black;
+  width: 400px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  margin-top: -50px;
+  font-size: 25px;
+  
+
+}
+.duvida p {
+  margin-top: 40px;
+  
+}
+.duvidas p {
     margin-top: 40px;
-    
+    color: black;
   }
-  .duvidas p {
-      margin-top: 40px;
-      color: black;
-    }
-  
-  
 
 
 #entrar{
@@ -310,11 +321,8 @@ cursor: pointer;
     text-align: center;
 }
 #trar{
-    margin-top: 275px;
-   
-}
-#pg{
-    margin-top: -140px;
+    margin-top: 272px;
+    position: relative;
 }
 #apagar{
     margin-left: 400px;   
@@ -333,6 +341,9 @@ cursor: pointer;
     cursor: pointer;
 
 
+}
+#pg{
+    margin-top: -140px;
 }
 
 
@@ -493,6 +504,8 @@ margin-top: -60px;
 width: 200px;
 color: white;
 }
+/* Estilo para as divs #y0, #y1, #y2, #y3 */
+/* Estilo para a div #sacar */
 #sacar {
     background-color: grey;
     width: 300px;
@@ -553,7 +566,8 @@ color: white;
     display: flex;
 }
 
-/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */.sacar,
+/* Estilo para os elementos <p> com classes "sacar", "depositar", "saldo" e "transferencia" */
+.sacar,
 .depositar,
 .saldo,
 .transferencia {
@@ -561,6 +575,12 @@ color: white;
     margin: 0; /* Remove qualquer margem padrão */
     
 }
+
+
+
+
+
+
 
 
 

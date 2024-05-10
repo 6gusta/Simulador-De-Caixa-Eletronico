@@ -130,3 +130,69 @@ h5 {
 .duvida p {
   margin-top: 40px;
 }
+#fundadores{
+
+  width: 100%;
+  height: 250px;
+  border: 1px solid black;
+  margin-top: 100px;
+
+}
+#gustavo,
+#thiago,
+#rodrigo {
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  border: 1px solid black;
+  float: left; /* Adiciona float para posicionar as divs uma ao lado da outra */
+  margin-right: 20px; /* Espaço entre as divs */
+  margin-top: 30px;
+  margin-left: 100px;
+  
+
+}
+
+#rodrigo {
+  background-image: url(imagens/WhatsApp\ Image\ 2024-05-07\ at\ 12.52.06.jpg);
+  margin-right: 0; /* Remove a margem direita da última div */
+
+}
+#gustavo{
+  background-image: url(imagens/2c89792c-99ab-436d-83d3-1d7aa1a26c1d11111.jpg);
+}
+#thiago{
+  background-image: url(imagens/WhatsApp\ Image\ 2024-05-07\ at\ 12.36.19\ \(1\)dsd.jpg);
+}
+.redes-sociais a {
+
+  margin-right: 20px; /* Ajuste a margem conforme necessário */
+ 
+
+
+}
+.redes-sociais {
+  margin-left: 100px;
+  margin-top: 220px;
+
+}
+
+#A{
+  margin-left: 380px;
+  margin-top: -20px;
+}
+#A a{
+  margin-right: 20px;
+}
+#B{
+  margin-left: 650px;
+  margin-top: -20px;
+}
+#B a{
+  margin-right: 20px;
+}
+
+
+
+
+
