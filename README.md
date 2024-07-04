@@ -1,2 +1,11 @@
- Simulador De Caixa Eletrônico 
-esse e um projeto que ainda  esta em desenvolvimento , inicialmente comecei ele pra fins acadêmicos   mais estou gostando muito da experencia com java.
+# SIMULADOR DE CAIXA ELETRÔNICO
+
+Este projeto simula o comportamento de um caixa eletrônico.
+
+## Linguagens Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- JAVA(spring boot)
+
