@@ -4,8 +4,8 @@ Este projeto simula o comportamento de um caixa eletrônico.
 
 ## Linguagens Utilizadas
 
-- HTML
-- CSS
-- JavaScript
-- JAVA(spring boot)
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.js linguist-language=JavaScript
+
 
